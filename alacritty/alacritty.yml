@@ -1,0 +1,19 @@
+import:
+  - ~/.config/alacritty/dracula.yml
+  # - ~/.config/alacritty/tokyo-night.yml
+
+window:
+  opacity: 0.8
+
+font:
+  size: 10
+  normal:
+    # family: JetBrains Mono
+    family: FiraCode Nerd Font
+    style: Regular
+
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block

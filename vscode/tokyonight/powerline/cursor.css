@@ -1,0 +1,7 @@
+/* Cursor Gradient */
+.monaco-editor .cursor {
+    background: linear-gradient(to bottom, #465298,  #fff);
+    box-shadow: 0 0 2px #00ffff;
+    border-color: #00ffff; 
+    color: #000000; 
+}
