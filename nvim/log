@@ -1,0 +1,122 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.011  000.011: --- NVIM STARTING ---
+000.498  000.487: locale set
+001.047  000.549: inits 1
+001.078  000.030: window checked
+006.098  005.020: parsing arguments
+006.431  000.333: expanding arguments
+006.468  000.037: inits 2
+007.569  001.101: init highlight
+007.572  000.003: waiting for UI
+009.236  001.665: done waiting for UI
+009.256  000.020: init screen for UI
+009.275  000.019: init default mappings
+009.537  000.261: init default autocommands
+011.018  000.055  000.055: sourcing /usr/share/nvim/runtime/ftplugin.vim
+011.358  000.033  000.033: sourcing /usr/share/nvim/runtime/indent.vim
+012.114  000.031  000.031: sourcing /usr/share/nvim/runtime/filetype.lua
+018.820  000.014  000.014: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/luasnip/ftdetect/snippets.vim
+019.094  000.012  000.012: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/fusion.vim
+019.120  000.014  000.014: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdresource.vim
+019.143  000.010  000.010: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+019.163  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/glimmer.vim
+019.186  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/glsl.vim
+019.213  000.015  000.015: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gowork.vim
+019.245  000.018  000.018: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/graphql.vim
+019.272  000.015  000.015: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/hack.vim
+019.309  000.025  000.025: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/hcl.vim
+019.329  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/heex.vim
+019.350  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/hjson.vim
+019.373  000.011  000.011: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/json5.vim
+019.400  000.016  000.016: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/ledger.vim
+019.424  000.012  000.012: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/nix.vim
+019.445  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/prisma.vim
+019.466  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/pug.vim
+019.490  000.012  000.012: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/ql.vim
+019.521  000.019  000.019: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+019.546  000.011  000.011: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/surface.vim
+019.567  000.010  000.010: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/teal.vim
+019.590  000.011  000.011: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/tlaplus.vim
+019.614  000.012  000.012: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/yang.vim
+020.547  008.418  008.126: sourcing /usr/share/nvim/runtime/filetype.vim
+020.908  000.015  000.015: sourcing /usr/share/nvim/runtime/ftplugin.vim
+021.210  000.009  000.009: sourcing /usr/share/nvim/runtime/indent.vim
+024.110  001.851  001.851: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/kanagawa.nvim/colors/kanagawa.vim
+119.722  108.278  097.955: sourcing /home/eduardo/.config/nvim/init.lua
+119.735  001.833: sourcing vimrc file(s)
+120.141  000.098  000.098: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+120.244  000.459  000.362: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+121.772  000.226  000.226: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+121.797  000.009  000.009: sourcing /usr/share/nvim/runtime/plugin/health.vim
+121.876  000.068  000.068: sourcing /usr/share/nvim/runtime/plugin/man.vim
+122.376  000.223  000.223: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+122.470  000.582  000.359: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+122.639  000.157  000.157: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+122.668  000.017  000.017: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+122.809  000.009  000.009: sourcing /home/eduardo/.local/share/nvim/rplugin.vim
+122.816  000.135  000.126: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+122.925  000.100  000.100: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+122.964  000.022  000.022: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+123.118  000.139  000.139: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+123.224  000.088  000.088: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+123.256  000.017  000.017: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+123.447  000.177  000.177: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+124.044  000.531  000.531: sourcing /home/eduardo/.config/nvim/plugin/packer_compiled.lua
+124.225  001.763: loading rtp plugins
+124.889  000.015  000.015: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/catppuccin/plugin/ctpcmds.vim
+125.309  000.218  000.218: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/dashboard-nvim/plugin/dashboard.vim
+125.652  000.171  000.171: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/hop.nvim/plugin/hop.vim
+128.161  002.429  002.429: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim/plugin/indent_blankline.vim
+128.559  000.210  000.210: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/lspsaga.nvim/plugin/lspsaga.vim
+128.933  000.264  000.264: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/luasnip/plugin/luasnip.vim
+129.230  000.035  000.035: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nightfox.nvim/plugin/nightfox.vim
+129.481  000.121  000.121: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim/plugin/nlspsetting.vim
+130.736  000.994  000.994: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-cmp/plugin/cmp.lua
+130.882  000.053  000.053: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua/plugin/colorizer.vim
+131.172  000.154  000.154: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/plugin/nvim-lsp-installer.vim
+131.449  000.113  000.113: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+131.742  000.126  000.126: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/plugin/nvim-tree-startup.lua
+132.623  000.793  000.793: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+134.320  001.555  001.555: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag/plugin/nvim-ts-autotag.vim
+134.712  000.252  000.252: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring/plugin/ts_context_commentstring.vim
+135.136  000.298  000.298: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow/plugin/rainbow.vim
+135.316  000.054  000.054: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+135.624  000.060  000.060: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+136.189  000.320  000.320: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+136.434  000.064  000.064: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/toggleterm.nvim/plugin/toggleterm.vim
+136.668  000.048  000.048: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/twilight.nvim/plugin/twilight.vim
+137.084  000.239  000.239: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/vim-clap/plugin/clap.vim
+137.841  000.201  000.201: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/vim-visual-multi/autoload/vm/plugs.vim
+138.621  000.173  000.173: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/vim-visual-multi/autoload/vm/maps.vim
+139.133  000.196  000.196: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/vim-visual-multi/autoload/vm/maps/all.vim
+140.716  003.471  002.901: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/vim-visual-multi/plugin/visual-multi.vim
+140.870  000.024  000.024: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/zen-mode.nvim/plugin/zen-mode.vim
+141.077  004.770: loading packages
+141.747  000.414  000.414: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/cmp-buffer/after/plugin/cmp_buffer.lua
+142.006  000.204  000.204: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/cmp-cmdline/after/plugin/cmp_cmdline.lua
+142.131  000.064  000.064: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua
+142.396  000.211  000.211: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/cmp-path/after/plugin/cmp_path.lua
+142.849  000.391  000.391: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/cmp-tabnine/after/plugin/cmp-tabnine.lua
+143.124  000.220  000.220: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/cmp_luasnip/after/plugin/cmp_luasnip.lua
+143.170  000.588: loading after plugins
+143.186  000.016: inits 3
+146.581  003.395: reading ShaDa
+147.767  001.186: opening buffers
+147.825  000.058: BufEnter autocommands
+147.828  000.003: editing files in windows
+149.555  000.143  000.143: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard.vim
+150.136  000.023  000.023: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/utils.vim
+150.624  000.222  000.222: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/section.vim
+151.685  000.245  000.245: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+156.483  000.072  000.072: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/dashboard-nvim/syntax/dashboard.vim
+159.567  000.092  000.092: sourcing /home/eduardo/.local/share/nvim/site/pack/packer/start/vim-clap/autoload/clap/provider/yanks.vim
+159.816  011.191: VimEnter autocommands
+159.819  000.003: UIEnter autocommands
+159.822  000.003: before starting main loop
+167.657  007.835: first screen update
+167.663  000.005: --- NVIM STARTED ---
