@@ -2,19 +2,36 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export JAVA_HOME=/usr/lib/jvm/
+export ZSH="$HOME/.oh-my-zsh"
+
+# Cargo
+export PATH=$PATH:~/.cargo/bin
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+# Android Studio 
 export ANDROID_HOME=~/Android/Sdk
+export ANDROID_SDK_ROOT=~/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/android-studio/bin
-export PATH=$PATH:~/.cargo/bin
-export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:/opt/gradle/gradle-6.9.3/bin
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-#ZSH_THEME="spaceship"
-#ZSH_THEME="pure"
-#ZSH_THEME="dracula"
+# Spicetify
+echo 'export PATH="$PATH:$HOME/bin"' >>~/.zshrcexport PATH="$PATH:$HOME/bin"export PATH=$PATH:$HOME/.spicetify
+
+# Alias
+alias g lg="lazygit"
+
+############################################
+#################### ZSH ###################
+############################################
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git)
@@ -47,8 +64,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-echo 'export PATH="$PATH:$HOME/bin"' >>~/.zshrcexport PATH="$PATH:$HOME/bin"export PATH=$PATH:$HOME/.spicetify
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -66,6 +81,11 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-# Load Angular CLI autocompletion.
-# source <(ng completion script)
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+############################################
+############################################
+############################################
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
