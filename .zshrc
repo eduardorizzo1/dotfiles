@@ -22,6 +22,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Dotnet
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=0
+
 # Spicetify
 echo 'export PATH="$PATH:$HOME/bin"' >>~/.zshrcexport PATH="$PATH:$HOME/bin"export PATH=$PATH:$HOME/.spicetify
 

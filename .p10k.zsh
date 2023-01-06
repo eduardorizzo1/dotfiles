@@ -182,9 +182,16 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
+  # typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=255
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
+  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'
+	
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=$'\uF303'
+  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=$''
+	typeset -g POWERLEVEL9K_LINUX_ARCH_ICON=$'\uf303'
+	typeset -g POWERLEVEL9K_LINUX_UBUNTU_ICON=$'\uf31b'
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -200,8 +207,6 @@
 
 	#typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='λ'
 	typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
-
-  
 
 
 
@@ -227,7 +232,8 @@
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=#fff
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
-  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
+  # typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
+  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
