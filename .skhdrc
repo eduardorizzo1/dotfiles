@@ -1,7 +1,8 @@
 # open terminal
 # alt - return : open -n /Applications/Alacritty.app/.app
+# alt - return : open -n /Applications/kitty.app/.app
 
-alt - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -n iTerm
+alt - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -n iTerm2
 
 
 alt - h : yabai -m window --focus west
@@ -39,7 +40,6 @@ alt + shift - right : yabai -m window --swap east || $(yabai -m window --display
 # alt + ctrl - down  : yabai -m window --insert south
 # alt + ctrl - up    : yabai -m window --insert north
 # alt + ctrl - right : yabai -m window --insert east
-
 
 
 alt + shift - 1 : yabai -m window --space 1
@@ -87,6 +87,7 @@ alt - n : yabai -m query --spaces --space \
 
 # close focused window
 alt - escape : yabai -m window --close
+alt - q : yabai -m window --close
 
 # enter fullscreen mode for the focused container
 alt - t : yabai -m window --toggle zoom-fullscreen
@@ -94,16 +95,13 @@ alt - t : yabai -m window --toggle zoom-fullscreen
 # toggle window native fullscreen
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
-
-
 # increase window size
-ctrl + alt - h : yabai -m window --resize top_left:-20:0
-ctrl + alt - k : yabai -m window --resize bottom_right:0:-20
+alt + ctrl - h : yabai -m window --resize top_left:-20:0
+alt + ctrl - k : yabai -m window --resize bottom_right:0:-20
 
 # decrease window size
-ctrl + alt - j : yabai -m window --resize bottom:0:-20
-ctrl + alt - l : yabai -m window --resize top_left:20:0
-
+alt + ctrl - j : yabai -m window --resize bottom:0:-20
+alt + ctrl - l : yabai -m window --resize top_left:20:0
 
 
 # go back to previous workspace (kind of like back_and_forth in i3)
