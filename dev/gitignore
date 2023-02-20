@@ -1,0 +1,33 @@
+node_modules
+.env
+build
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+yarn-debug.log*
+npm-debug.log*
+yarn-error.log*
+npm-error.log*
+
+# Tests
+coverage
+coverage/*
+*.lcov
+
+.eslintcache
+.stylelintcache
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
