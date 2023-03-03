@@ -23,3 +23,9 @@ ctrl+shift+,
 
 Set tab title
 ctrl+shift+alt+t (also ⇧+⌘+i on macOS)
+
+
+# Which key text press
+
+kitty +kitten show_key 
+
