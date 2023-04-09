@@ -1,46 +1,19 @@
-# open terminal
-# alt - return : open -n /Applications/Alacritty.app/.app
+# ---------- Kitty ----------
 # alt - return : open -n /Applications/kitty.app/.app
-
-alt - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -n iTerm2
-
-
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
-# (alt) change focus (using arrow keys)
-alt - left  : yabai -m window --focus west
-alt - down  : yabai -m window --focus south
-alt - up    : yabai -m window --focus north
-alt - right : yabai -m window --focus east
+alt - return : Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 
+# ---------- Yabai ----------
+alt - h : yabai -m window --focus west || $(yabai -m display --focus west)
+alt - j : yabai -m window --focus south || $(yabai -m display --focus south)
+alt - k : yabai -m window --focus north || $(yabai -m display --focus north)
+alt - l : yabai -m window --focus east || $(yabai -m display --focus east)
 
 # shift window in current workspace
 alt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
 alt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
 alt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
 alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
-# alternatively, use the arrow keys
-alt + shift - left : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
-alt + shift - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
-alt + shift - up : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
-alt + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
-
-
-
-# set insertion point in focused container
-# alt + ctrl - h : yabai -m window --insert west
-# alt + ctrl - j : yabai -m window --insert south
-# alt + ctrl - k : yabai -m window --insert north
-# alt + ctrl - l : yabai -m window --insert east
-# (alt) set insertion point in focused container using arrows
-# alt + ctrl - left  : yabai -m window --insert west
-# alt + ctrl - down  : yabai -m window --insert south
-# alt + ctrl - up    : yabai -m window --insert north
-# alt + ctrl - right : yabai -m window --insert east
-
 
 alt + shift - 1 : yabai -m window --space 1
 alt + shift - 2 : yabai -m window --space 2
@@ -67,10 +40,6 @@ alt - s : yabai -m space --layout bsp
 alt - f : yabai -m space --layout float
 alt - i : yabai -m space --layout stack
 
-# cycle through stack windows
-# alt - p : yabai -m window --focus stack.next || yabai -m window --focus south
-# alt - n : yabai -m window --focus stack.prev || yabai -m window --focus north
-
 # forwards
 alt - p : yabai -m query --spaces --space \
             | jq -re ".index" \
@@ -86,7 +55,7 @@ alt - n : yabai -m query --spaces --space \
             | xargs -I{} yabai -m window --focus {}
 
 # close focused window
-alt - escape : yabai -m window --close
+alt - escape : yabai -m window --destroy
 alt - q : yabai -m window --close
 
 # enter fullscreen mode for the focused container
@@ -103,6 +72,28 @@ alt + ctrl - k : yabai -m window --resize bottom_right:0:-20
 alt + ctrl - j : yabai -m window --resize bottom:0:-20
 alt + ctrl - l : yabai -m window --resize top_left:20:0
 
+
+# ---------- iTerm2 ----------
+# alt - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -n iTerm2
+# ---------- Alacritty ----------
+# alt - return : open -n /Applications/Alacritty.app/.app
+
+
+# set insertion point in focused container
+# alt + ctrl - h : yabai -m window --insert west
+# alt + ctrl - j : yabai -m window --insert south
+# alt + ctrl - k : yabai -m window --insert north
+# alt + ctrl - l : yabai -m window --insert east
+# (alt) set insertion point in focused container using arrows
+# alt + ctrl - left  : yabai -m window --insert west
+# alt + ctrl - down  : yabai -m window --insert south
+# alt + ctrl - up    : yabai -m window --insert north
+# alt + ctrl - right : yabai -m window --insert east
+
+
+# cycle through stack windows
+# alt - p : yabai -m window --focus stack.next || yabai -m window --focus south
+# alt - n : yabai -m window --focus stack.prev || yabai -m window --focus north
 
 # go back to previous workspace (kind of like back_and_forth in i3)
 # alt - b : yabai -m space --focus recent
