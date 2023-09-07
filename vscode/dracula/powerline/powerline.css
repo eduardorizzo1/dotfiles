@@ -3,14 +3,14 @@ body {
   --powerline-normal-bg: #bd93f9;
   --powerline-insert-bg: #50fa7b;
   --powerline-replace-bg: #ff5555;
-  --powerline-visual-bg: #f1fa8c;
+  --powerline-visual-bg: #ff79c6;
   --powerline-inner-fg: #ffffff;
   --powerline-inner-bg: #21222c;
   --powerline-inner-bg-hl: #44475a;
   --powerline-second-segment-fg: #ffffff;
   --powerline-second-segment-bg: rgba(0, 0, 0, 0.5);
   --powerline-separator: #6272a4;
-  --powerline-vim-command-line: #ff79c6;
+  --powerline-vim-command-line: #ffffff;
   --powerline-mode-weight: bold;
 }
 
