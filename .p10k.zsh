@@ -10,7 +10,7 @@
 #
 # Tip: Looking for a nice color? Here's a one-liner to print colormap.
 #
-#   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
+  # for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 
 # Temporarily change options.
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -56,12 +56,12 @@
     pyenv                   # python environment (https://github.com/pyenv/pyenv)
     goenv                   # go environment (https://github.com/syndbg/goenv)
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
-    nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
+    # nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-    # node_version          # node.js version
+    node_version          # node.js version
     # go_version            # go version (https://golang.org)
-    # rust_version          # rustc version (https://www.rust-lang.org)
-    # dotnet_version        # .NET version (https://dotnet.microsoft.com)
+    rust_version          # rustc version (https://www.rust-lang.org)
+    dotnet_version        # .NET version (https://dotnet.microsoft.com)
     # php_version           # php version (https://www.php.net/)
     # laravel_version       # laravel php framework version (https://laravel.com/)
     # java_version          # java version (https://www.java.com/)
@@ -164,26 +164,58 @@
   fi
 
 	# ROUNDED
-  # typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='\uE0B7'
-  # typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0B6' 
-  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B6'
-  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL='\uE0B4'
-  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='\uE0B5' 
-  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\uE0B4' 
-  # typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='\uE0B4'
-  # # typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B6'
-  # typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL= 
-
-	# POWERLINE
-  typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
-  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='' 
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='\uE0B7'
+  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0B6' 
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B6'
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL='\uE0B4'
   typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='\uE0B5' 
-  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='' 
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\uE0B4' 
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='\uE0B4'
   # typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B6'
   typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL= 
+	
+	# ROUNDED 2
+	# typeset -g POWERLEVEL9K_{LEFT,RIGHT}_LEFT_WHITESPACE='%S%F{#171A1B}\uE0B6%s'
+ 	# typeset -g POWERLEVEL9K_{LEFT,RIGHT}_RIGHT_WHITESPACE='%S%F{#171A1B}\uE0B4%s'
+
+  # Separator between same-color segments on the left.
+  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%k '
+  # # Separator between same-color segments on the right.
+  # typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%k '
+  # # Separator between different-color segments on the left.
+  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='%k '
+  # # Separator between different-color segments on the right.
+  # typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='%k '
+  # # The right end of left prompt.
+  # typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=
+  # # The left end of right prompt.
+  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL=
+  # # The left end of left prompt.
+  # typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=
+  # # The right end of right prompt.
+  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL=
+
+	# POWERLINE
+  # typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
+  # typeset -g POWERLEVEL9K_RIGHt_SEGMENT_SEPARATOR='' 
+  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
+  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='' 
+  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='' 
+  # typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  # # typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
+  # typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL= 
+	
+	# SLANT MIX
+  # typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
+  # typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='' 
+  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
+  # typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='' 
+  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='' 
+  # typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  # typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
+  # typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL= 
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
@@ -1075,7 +1107,7 @@
 
   ##############################[ node_version: node.js version ]###############################
   # Node version color.
-  typeset -g POWERLEVEL9K_NODE_VERSION_FOREGROUND=7
+  typeset -g POWERLEVEL9K_NODE_VERSION_FOREGROUND=232
   typeset -g POWERLEVEL9K_NODE_VERSION_BACKGROUND=2
   # Show node version only when in a directory tree containing package.json.
   typeset -g POWERLEVEL9K_NODE_VERSION_PROJECT_ONLY=true
