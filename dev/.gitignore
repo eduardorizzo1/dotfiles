@@ -18,6 +18,7 @@ coverage
 coverage/*
 *.lcov
 
+# Eslint
 .eslintcache
 .stylelintcache
 

@@ -6,5 +6,5 @@
   "tabWidth": 2,
   "jsxBracketSameLine": false,
   "bracketSpacing": true,
-  "printWidth": 60
+  "printWidth": 80
 }
