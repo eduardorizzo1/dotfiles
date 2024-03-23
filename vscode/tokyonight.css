@@ -5,7 +5,7 @@ body {
   --powerline-replace-bg: #f7768e;
   --powerline-visual-bg: #bb9af7;
   --powerline-inner-fg: #a9b1d6;
-  --powerline-inner-bg: #1f2335;
+  --powerline-inner-bg: #191b28;
   --powerline-inner-bg-hl: #44475a;
   --powerline-second-segment-bg: rgba(0, 0, 0, 0.5);
   /* --powerline-second-segment-bg: #252535; */
@@ -443,28 +443,40 @@ footer.statusbar {
   background: var(--powerline-visual-bg);
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label='-- NORMAL --']:before {
-  content: 'NORMAL';
+  content: ' NORMAL';
   font-size: 12px;
+  font-family: 'Hack Nerd Font';
+  font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label='-- INSERT --']:before {
-  content: 'INSERT';
+  content: ' INSERT';
   font-size: 12px;
+  font-family: 'Hack Nerd Font';
+  font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label='-- REPLACE --']:before {
-  content: 'REPLACE';
+  content: ' REPLACE';
   font-size: 12px;
+  font-family: 'Hack Nerd Font';
+  font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label='-- VISUAL --']:before {
-  content: 'VISUAL';
+  content: ' VISUAL';
   font-size: 12px;
+  font-family: 'Hack Nerd Font';
+  font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label='-- VISUAL LINE --']:before {
-  content: 'V-LINE';
+  content: ' V-LINE';
   font-size: 12px;
+  font-family: 'Hack Nerd Font';
+  font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label='-- VISUAL BLOCK --']:before {
-  content: 'V-BLOCK';
+  content: ' V-BLOCK';
   font-size: 12px;
+  font-family: 'Hack Nerd Font';
+  font-weight: 500;
 }
 
 /* More VSCodeVim */
@@ -495,9 +507,9 @@ footer.statusbar {
 /* Custom  */
 
 /* Remove Right top icons */
-.tabs-and-actions-container .editor-actions {
-  display: none !important;
-}
+/* .tabs-and-actions-container .editor-actions { */
+/*   display: none !important; */
+/* } */
 
 .explorer-viewlet {
   font-size: 0.8rem;
@@ -514,17 +526,17 @@ footer.statusbar {
   font-weight: normal;
 }
 
-.monaco-editor .cursor {
-  background: linear-gradient(to bottom, #465298, #fff);
-  box-shadow: 0 0 2px #00ffff;
-  border-color: #00ffff;
-  color: #000000;
-}
+/* .monaco-editor .cursor { */
+/*   background: linear-gradient(to bottom, #465298, #fff); */
+/*   box-shadow: 0 0 2px #00ffff; */
+/*   border-color: #00ffff; */
+/*   color: #000000; */
+/* } */
 
 /* Cursor Gradient */
-.monaco-editor .cursor {
-  background: linear-gradient(to bottom, #465298, #fff);
-  box-shadow: 0 0 2px #00ffff;
-  border-color: #00ffff;
-  color: #000000;
-}
+/* .monaco-editor .cursor { */
+/*   background: linear-gradient(to bottom, #465298, #fff); */
+/*   box-shadow: 0 0 2px #00ffff; */
+/*   border-color: #00ffff; */
+/*   color: #000000; */
+/* } */
