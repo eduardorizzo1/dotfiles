@@ -291,6 +291,10 @@
     "command": "workbench.action.increaseViewWidth"
   },
   {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.decreaseViewWidth"
+  },
+  {
     "key": "ctrl+alt+j",
     "command": "workbench.action.increaseViewHeight"
   },
@@ -734,7 +738,7 @@
     "command": "workbench.action.increaseViewWidth"
   },
   {
-    "key": "ctrl+alt+l",
+    "key": "ctrl+cmd+l",
     "command": "workbench.action.decreaseViewWidth"
   },
   {
