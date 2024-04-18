@@ -1,0 +1,48 @@
+@import "./themes/tokyonight-moon.css";
+
+* {
+  font-family: Hack;
+  font-weight: 600;
+  font-size: 12pt;
+  color: #c0caf5;
+  background: #1a1b26;
+}
+
+#mpd,
+#tray,
+#pulseaudio,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#keyboard-state,
+#clock {
+  margin: 0 4px;
+}
+
+/*========== Left =============*/
+#workspaces {
+  color: @blue;
+}
+
+/*========== Right =============*/
+#idle_inhibitor {
+  color: @green;
+}
+
+#pulseaudio {
+  color: @magenta;
+}
+
+#network {
+  color: @orange;
+}
+
+#clock {
+  color: #86e1fc;
+}
+
+#custom-powermenu {
+  color: @red;
+}
