@@ -1,24 +1,28 @@
 @import "./themes/tokyonight-moon.css";
 
 * {
-  font-family: Hack;
+  font-family: Ubuntu;
   font-weight: 600;
   font-size: 12pt;
   color: #c0caf5;
-  background: #1a1b26;
+  background: transparent;
 }
 
 #mpd,
-#tray,
 #pulseaudio,
 #power-profiles-daemon,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#keyboard-state,
+#network,
+#custom-powermenu,
+#workspaces,
+#window,
+#taskbar,
+#tray,
 #clock {
-  margin: 0 4px;
+  background: @bg;
+  border: solid 1px @blue;
+  border-radius: 12px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /*========== Left =============*/
@@ -40,9 +44,15 @@
 }
 
 #clock {
-  color: #86e1fc;
+  color: @cyan;
 }
 
 #custom-powermenu {
   color: @red;
+}
+
+#workspaces {
+  box-shadow: none;
+  text-shadow: none;
+  color: @fg;
 }
