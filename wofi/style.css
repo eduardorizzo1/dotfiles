@@ -19,14 +19,14 @@ window {
   margin: 20px;
   padding-left: 20px;
   border: none;
-  color: #fff;
+  color: @fg;
   background: #222436;
   outline: none;
   border-radius: 16px;
 }
 
 #input image {
-  color: #fff;
+  color: #c8d3f5;
 }
 
 #input:focus {
@@ -75,6 +75,7 @@ window {
   border: none;
   padding: 0px;
   background: transparent;
+  color: #c8d3f5;
 }
 
 #entry {
@@ -91,5 +92,5 @@ window {
   margin: 0px;
   border: none;
   border-radius: 16px;
-  background: #2f334d;
+  background: linear-gradient(90deg, #2f334d 0%, #7a88cf 100%);
 }
