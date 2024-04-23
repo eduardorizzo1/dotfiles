@@ -1,11 +1,22 @@
 @import "./themes/tokyonight-moon.css";
 
 * {
-  font-family: Ubuntu;
+  font-family: "Ubuntu";
   font-weight: 600;
-  font-size: 12pt;
-  color: #c0caf5;
-  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0px;
+  min-height: 10px;
+  color: @fg;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+tooltip {
+  background: @bg;
+  color: @fg;
+  border-radius: 8px;
+  border-width: 0px;
 }
 
 #mpd,
@@ -13,14 +24,14 @@
 #power-profiles-daemon,
 #network,
 #custom-powermenu,
-#workspaces,
+/* #workspaces, */
 #window,
-#taskbar,
-#tray,
+/* #taskbar, */
+/* #tray, */
 #clock {
   background: @bg;
-  border: solid 1px @blue;
-  border-radius: 12px;
+  border: solid 1px @bg;
+  border-radius: 16px;
   padding-left: 3px;
   padding-right: 3px;
 }
