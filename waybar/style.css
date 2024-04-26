@@ -12,8 +12,7 @@
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.6);
-    /* background: transparent; */
+  background: rgba(0, 0, 0, 0);
 }
 
 tooltip {
@@ -32,13 +31,18 @@ tooltip {
 #taskbar,
 #tray,
 #wireplumber,
+#memory,
+#cpu,
+#bluetooth,
+#custom-powermenu,
+#custom-arch,
 #clock {
-  background: @bg;
-  border: solid 0.6px @blue;
+  background: #000000;
+  border: solid 0.6px transparent;
   border-radius: 16px;
   padding-left: 4px;
   padding-right: 4px;
-  margin: 4px 0px;
+  margin: 4px 0px 0px 0px;
 }
 
 #workspaces button.active {
@@ -49,31 +53,40 @@ tooltip {
 #workspaces button.active label {
   color: @yellow;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-/* #workspaces button label { */
-/*   color: @blue; */
-/* } */
-
-#pulseaudio {
+#workspaces button label {
+  font-size: 18px;
   color: @blue;
 }
 
+#wireplumber {
+  color: @blue;
+}
+
+#pulseaudio {
+  color: @cyan;
+}
+
 #network {
-  color: @orange;
+  color: @green;
 }
 
 #clock {
-  color: @cyan;
+  color: @blue;
 }
 
 #custom-powermenu {
   color: @red;
+  font-size: 18px;
+  padding: 0 4px 0 0;
 }
 
 #custom-arch {
   color: @blue;
+  font-size: 20px;
+  padding: 0 4px 0 0;
 }
 
 #temperature {
@@ -85,9 +98,9 @@ tooltip {
 }
 
 #cpu {
-  color: @blue;
+  color: @orange;
 }
 
-#tray label {
-  color: #ff00ff;
+#bluetooth {
+  color: @blue;
 }
