@@ -83,8 +83,8 @@
   },
   // ========================
   "clock": {
-    "format": " 󰅐  {:%R}  ",
-    "format-alt": " 󰃭  {:%d·%m   󰅐  %R}  ",
+    "format": " 󰅐 {:%R}  ",
+    "format-alt": " 󰃭 {:%d·%m   󰅐  %R}  ",
     "tooltip-format": "<tt>{calendar}</tt>",
     "rotate": 0,
     "calendar": {
@@ -169,9 +169,9 @@
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}% ",
-    "format-muted": " ",
+    "format-muted": "",
     "format-icons": {
-        "default": [" ", " ", "󰕾 ", " "]
+        "default": ["", "", "󰕾", ""]
     },
     "max-volume": 100,
     "scroll-step": 2,
@@ -267,7 +267,7 @@
     "format-icons": [""," ", " "]
   },
   "cpu": {
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "tooltip": false
   },
   "custom/media": {
@@ -282,7 +282,7 @@
     "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
   },
   "memory": {
-    "format": "  {}%"
+    "format": " {}%"
   },
   "custom/playerctl#backward": {
       "format": "󰙣 ",
