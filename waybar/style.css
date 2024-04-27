@@ -9,39 +9,52 @@
   border-radius: 0px;
   min-height: 12px;
   color: @fg;
+  margin-bottom: 0;
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 
 tooltip {
   background: @bg;
-  border: solid 1px @blue;
-  border-radius: 12px;
+  border: solid 0.8px @blue;
+  border-radius: 16px;
 }
 
-#mpd,
-#pulseaudio,
-#power-profiles-daemon,
-#network,
-#workspaces,
-#window,
-#taskbar,
-#tray,
-#wireplumber,
-#memory,
-#cpu,
-#bluetooth,
-#custom-powermenu,
-#custom-arch,
-#clock {
-  background: #000000;
-  border: solid 0.6px @blue;
-  border-radius: 12px;
+/************************************************/
+/***************** [ Left ] ******************/
+/***********************************************/
+#custom-arch {
+  color: @blue;
+  font-size: 20px;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 16px 0px 0px 16px;
+
+  padding: 0px 8px 0px 8px;
+}
+
+#taskbar {
+  background: #000;
+  margin: 2px 0 2px 0;
+  border: solid 0.8px @blue;
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+}
+
+#workspaces {
+  background: #000;
+  background: #000;
+  margin: 2px 0 2px 0;
+  border: solid 0.8px @blue;
+  border-radius: 0px 16px 16px 0px;
+
   padding-left: 4px;
   padding-right: 4px;
-  margin: 4px 0px 0px 0px;
 }
 
 #workspaces button.active {
@@ -52,74 +65,49 @@ tooltip {
 #workspaces button.active label {
   color: @yellow;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #workspaces button label {
-  font-size: 18px;
-  color: @blue;
-}
-
-#wireplumber {
-  color: @blue;
-}
-
-#pulseaudio {
-  color: @cyan;
-}
-
-#network {
-  color: @green;
-}
-
-#clock {
-  color: @blue;
-}
-
-#custom-powermenu {
-  color: @red;
-  font-size: 18px;
-  padding: 0 4px 0 0;
-  margin-right: 12px;
-}
-
-#custom-arch {
-  color: @blue;
   font-size: 20px;
-  padding: 0 4px 0 0;
-}
-
-#temperature {
-  color: @green;
-}
-
-#memory {
-  color: @magenta;
-}
-
-#cpu {
-  color: @orange;
-}
-
-#bluetooth {
   color: @blue;
 }
 
+/***********************************************/
+/***************** [ Center ] ******************/
+/***********************************************/
 #custom-playerctl.backward,
 #custom-playerctl.play,
 #custom-playerctl.foward {
-  background: #000000;
   font-weight: bold;
-  margin: 5px 0px;
-}
-
-#custom-playerctl.backward,
-#custom-playerctl.play,
-#custom-playerctl.foward {
-  background: #000000;
-  margin: 4px 0px 0px 0px;
   font-size: 24px;
 }
+
+#pulseaudio.output,
+#pulseaudio.input {
+  font-size: 18px;
+}
+
+#pulseaudio.output {
+  color: @cyan;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0;
+  border-right: none;
+}
+
+#pulseaudio.input {
+  color: @purple;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 16px 16px 0px;
+  border-left: none;
+}
+
 #custom-playerctl.backward:hover,
 #custom-playerctl.play:hover,
 #custom-playerctl.foward:hover {
@@ -127,35 +115,138 @@ tooltip {
 }
 #custom-playerctl.backward {
   color: @magenta;
-  border-radius: 12px 0px 0px 12px;
-  border-top: solid 0.6px @blue;
-  border-bottom: solid 0.6px @blue;
-  border-left: solid 0.6px @blue;
+  background: #000;
+  margin: 2px 0 2px 0;
   padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 16px 0px 0px 16px;
+  border-right: none;
 }
 #custom-playerctl.play {
   color: @blue;
-  border: solid 0.6px @blue;
-  border-top: solid 0.6px @blue;
-  border-bottom: solid 0.6px @blue;
+  background: #000;
+  margin: 2px 0;
+  border: solid 0.8px @blue;
+  border-radius: 0px;
   border-right: none;
   border-left: none;
 }
 #custom-playerctl.foward {
   color: @magenta;
+  background: #000;
+  margin: 2px 0 2px 0;
+  border: solid 0.8px @blue;
   border-radius: 0px;
-  border-top: solid 0.6px @blue;
-  border-bottom: solid 0.6px @blue;
+  border-left: none;
   border-right: none;
 }
 #custom-playerlabel {
-  background: #000000;
   color: @blue;
-  padding: 0 16px;
-  margin: 4px 0px 0px 0px;
-  border-radius: 0px 12px 12px 0px;
-  border-top: solid 0.6px @blue;
-  border-bottom: solid 0.6px @blue;
-  border-left: none;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0;
+  border-right: none;
+
+  padding-right: 2px;
+}
+
+/***********************************************/
+/***************** [ Right ] *******************/
+/***********************************************/
+#memory {
+  color: @blue;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+
+  padding: 0px 8px 0px 8px;
+}
+
+#temperature {
+  color: @orange;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+
+  padding: 0px 8px 0px 8px;
+}
+
+#cpu {
+  color: @magenta;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+
+  padding: 0px 8px 0px 8px;
+}
+
+#tray {
+  color: @blue;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 16px 0px 0px 16px;
+  border-right: none;
+
+  padding: 0px 8px 0px 10px;
+}
+
+#bluetooth {
+  color: @blue;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+
+  padding: 0px 8px 0px 8px;
+}
+
+#network {
+  color: @green;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+
+  padding: 0px 8px 0px 8px;
+}
+
+#clock {
+  color: @cyan;
+  background: #000;
+  margin: 2px 0 2px 0;
+  padding-left: 8px;
+  border: solid 0.8px @blue;
+  border-radius: 0px 0px 0px 0px;
+  border-right: none;
+
+  padding: 0px 8px 0px 8px;
   font-weight: bold;
+}
+
+#custom-powermenu {
+  color: @red;
+  font-size: 18px;
+  background: #000;
+  margin: 2px 4px 2px 0;
+  border: solid 0.8px @blue;
+  border-radius: 0px 16px 16px 0px;
+
+  padding: 0px 12px 0px 4px;
 }

@@ -11,32 +11,32 @@
   "modules-left": [
     "custom/space_2x",
     "custom/arch",
-    "hyprland/workspaces#pacman",
     "wlr/taskbar",
-    "cava#left",
-    "cava#right"
+    "hyprland/workspaces#pacman"
   ],
 
   "modules-center": [
     "custom/playerctl#backward",
     "custom/playerctl#play",
     "custom/playerctl#foward",
-    "custom/playerlabel"
+    "custom/playerlabel",
+    "pulseaudio#output",
+    "pulseaudio#input"
   ],
 
   "modules-right": [
     "tray",
-    "pulseaudio",
+    "memory",
+    "temperature",
+    "cpu",
     "bluetooth",
     "mpd",
-    "memory",
-    "cpu",
     "network",
     "clock",
     "custom/powermenu"
   ],
   //===============================================
-  // ===========[ Modules configuration ] =========
+  //============[ Modules configuration ] =========
   //===============================================
   "hyprland/workspaces": {
     "format": "{name}",
@@ -83,10 +83,10 @@
   },
   // ========================
   "clock": {
-    "format": " 󰃭  {:%d·%m │ 󰅐  %R} ",
-    "rotate": 0,
-    "format-alt": " 󰅐  {:%R} ",
+    "format": " 󰅐  {:%R}  ",
+    "format-alt": " 󰃭  {:%d·%m   󰅐  %R}  ",
     "tooltip-format": "<tt>{calendar}</tt>",
+    "rotate": 0,
     "calendar": {
       "mode": "year",
       "mode-mon-col": 3,
@@ -153,6 +153,36 @@
       ]
     },
     "on-click": "pavucontrol"
+  },
+
+  "pulseaudio#input": {
+    "format-source": " {volume}%  ",
+    "format-source-muted": "   ",
+    "format": "{format_source}",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "max-volume": 100,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-middle": "pavucontrol",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+  },
+  "pulseaudio#output": {
+    "format": "{icon} {volume}% ",
+    "format-muted": " ",
+    "format-icons": {
+        "default": [" ", " ", "󰕾 ", " "]
+    },
+    "max-volume": 100,
+    "scroll-step": 2,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "pavucontrol",
+    "on-click-middle": "pavucontrol"
+  },
+  "wireplumber": {
+      "format": "{icon} {volume}%",
+      "format-icons": ["", "", "󰕾", ""],
+      "tooltip": false
   },
   // ========================
   "bluetooth": {
@@ -231,39 +261,10 @@
     "tooltip": false
   },
 
-  "pulseaudio#input": {
-    "format-source": "  {volume}% ",
-    "format-source-muted": "  ",
-    "format": "{format_source}",
-    "scroll-step": 1,
-    "smooth-scrolling-threshold": 1,
-    "max-volume": 100,
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-    "on-click-middle": "pavucontrol",
-    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
-  },
-  "pulseaudio#output": {
-    "format": "{icon} {volume}% ",
-    "format-muted": "  ",
-    "format-icons": {
-        "default": ["  ", "  ", " 󰕾 ", "  "]
-    },
-    "max-volume": 100,
-    "scroll-step": 2,
-    "smooth-scrolling-threshold": 1,
-    "on-click": "pavucontrol",
-    "on-click-middle": "pavucontrol"
-  },
-  "wireplumber": {
-      "format": "{icon} {volume}%",
-      "format-icons": ["", "", "󰕾", ""],
-      "tooltip": false
-  },
   "temperature": {
     "critical-threshold": 80,
     "format": "{icon} {temperatureC}°C",
-    "format-icons": [" ", "", " "]
+    "format-icons": [""," ", " "]
   },
   "cpu": {
     "format": "  {usage}%",
@@ -298,31 +299,31 @@
   },
 
   "custom/playerctl#play": {
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "format": "{icon}",
     "format-icons": {
       "Paused": "<span> </span>",
       "Playing": "<span>󰏥 </span>",
-      "Stopped": "<span></span>"
+      "Stopped": "<span> </span>"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-down": "playerctl volume .05-",
     "on-scroll-up": "playerctl volume .05+",
-    "return-type": "json"
+    "return-type": "json",
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
   },
 
   "custom/playerlabel": {
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "format": "<span>󰎈 {} 󰎈</span>",
     "max-length": 28,
     "on-click": "",
-    "return-type": "json"
+    "return-type": "json",
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
   },
 
   "cava#left": {
-    "autosens": 1,
+    "autosens": 10,
     "bar_delimiter": 0,
-    "bars": 18,
+    "bars": 12,
     "framerate": 60,
     "higher_cutoff_freq": 10000,
     "input_delay": 2,
@@ -347,7 +348,7 @@
   "cava#right": {
     "autosens": 1,
     "bar_delimiter": 0,
-    "bars": 18,
+    "bars": 12,
     "framerate": 60,
     "higher_cutoff_freq": 10000,
     "input_delay": 2,
