@@ -25,7 +25,6 @@ tooltip {
 #pulseaudio,
 #power-profiles-daemon,
 #network,
-/* #custom-powermenu, */
 #workspaces,
 #window,
 #taskbar,
@@ -38,8 +37,8 @@ tooltip {
 #custom-arch,
 #clock {
   background: #000000;
-  border: solid 0.6px transparent;
-  border-radius: 16px;
+  border: solid 0.6px @blue;
+  border-radius: 12px;
   padding-left: 4px;
   padding-right: 4px;
   margin: 4px 0px 0px 0px;
@@ -81,6 +80,7 @@ tooltip {
   color: @red;
   font-size: 18px;
   padding: 0 4px 0 0;
+  margin-right: 12px;
 }
 
 #custom-arch {
@@ -103,4 +103,59 @@ tooltip {
 
 #bluetooth {
   color: @blue;
+}
+
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-playerctl.foward {
+  background: #000000;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-playerctl.foward {
+  background: #000000;
+  margin: 4px 0px 0px 0px;
+  font-size: 24px;
+}
+#custom-playerctl.backward:hover,
+#custom-playerctl.play:hover,
+#custom-playerctl.foward:hover {
+  color: @orange;
+}
+#custom-playerctl.backward {
+  color: @magenta;
+  border-radius: 12px 0px 0px 12px;
+  border-top: solid 0.6px @blue;
+  border-bottom: solid 0.6px @blue;
+  border-left: solid 0.6px @blue;
+  padding-left: 8px;
+}
+#custom-playerctl.play {
+  color: @blue;
+  border: solid 0.6px @blue;
+  border-top: solid 0.6px @blue;
+  border-bottom: solid 0.6px @blue;
+  border-right: none;
+  border-left: none;
+}
+#custom-playerctl.foward {
+  color: @magenta;
+  border-radius: 0px;
+  border-top: solid 0.6px @blue;
+  border-bottom: solid 0.6px @blue;
+  border-right: none;
+}
+#custom-playerlabel {
+  background: #000000;
+  color: @blue;
+  padding: 0 16px;
+  margin: 4px 0px 0px 0px;
+  border-radius: 0px 12px 12px 0px;
+  border-top: solid 0.6px @blue;
+  border-bottom: solid 0.6px @blue;
+  border-left: none;
+  font-weight: bold;
 }

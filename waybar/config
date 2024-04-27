@@ -2,27 +2,35 @@
   "layer": "top",
   "position": "top",
   "height": 25,
-  "spacing": 4,
+  "spacing": 0,
   "output": [
-    "DP-2"
+    "DP-2",
+    "HDMI-A-1"
   ],
 
   "modules-left": [
     "custom/space_2x",
     "custom/arch",
     "hyprland/workspaces#pacman",
-    "wlr/taskbar"
+    "wlr/taskbar",
+    "cava#left",
+    "cava#right"
   ],
 
-  "modules-center": [],
+  "modules-center": [
+    "custom/playerctl#backward",
+    "custom/playerctl#play",
+    "custom/playerctl#foward",
+    "custom/playerlabel"
+  ],
 
   "modules-right": [
     "tray",
+    "pulseaudio",
+    "bluetooth",
     "mpd",
     "memory",
     "cpu",
-    "bluetooth",
-    "pulseaudio",
     "network",
     "clock",
     "custom/powermenu"
@@ -273,6 +281,92 @@
     "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
   },
   "memory": {
-    "format": "   {}%"
+    "format": "  {}%"
   },
+  "custom/playerctl#backward": {
+      "format": "󰙣 ",
+      "on-click": "playerctl previous",
+      "on-scroll-down": "playerctl volume .05-",
+      "on-scroll-up": "playerctl volume .05+"
+  },
+
+  "custom/playerctl#foward": {
+    "format": "󰙡 ",
+    "on-click": "playerctl next",
+    "on-scroll-down": "playerctl volume .05-",
+    "on-scroll-up": "playerctl volume .05+"
+  },
+
+  "custom/playerctl#play": {
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "format": "{icon}",
+    "format-icons": {
+      "Paused": "<span> </span>",
+      "Playing": "<span>󰏥 </span>",
+      "Stopped": "<span></span>"
+    },
+    "on-click": "playerctl play-pause",
+    "on-scroll-down": "playerctl volume .05-",
+    "on-scroll-up": "playerctl volume .05+",
+    "return-type": "json"
+  },
+
+  "custom/playerlabel": {
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "format": "<span>󰎈 {} 󰎈</span>",
+    "max-length": 28,
+    "on-click": "",
+    "return-type": "json"
+  },
+
+  "cava#left": {
+    "autosens": 1,
+    "bar_delimiter": 0,
+    "bars": 18,
+    "framerate": 60,
+    "higher_cutoff_freq": 10000,
+    "input_delay": 2,
+    "lower_cutoff_freq": 50,
+    "method": "pipewire",
+    "monstercat": false,
+    "reverse": false,
+    "source": "auto",
+    "stereo": true,
+    "waves": false,
+    "format-icons": [
+      "<span foreground='#cba6f7'>▁</span>",
+      "<span foreground='#cba6f7'>▂</span>",
+      "<span foreground='#cba6f7'>▃</span>",
+      "<span foreground='#cba6f7'>▄</span>",
+      "<span foreground='#89b4fa'>▅</span>",
+      "<span foreground='#89b4fa'>▆</span>",
+      "<span foreground='#89b4fa'>▇</span>",
+      "<span foreground='#89b4fa'>█</span>"
+    ]
+  },
+  "cava#right": {
+    "autosens": 1,
+    "bar_delimiter": 0,
+    "bars": 18,
+    "framerate": 60,
+    "higher_cutoff_freq": 10000,
+    "input_delay": 2,
+    "lower_cutoff_freq": 50,
+    "method": "pipewire",
+    "monstercat": false,
+    "reverse": false,
+    "source": "auto",
+    "stereo": true,
+    "waves": false,
+    "format-icons": [
+      "<span foreground='#cba6f7'>▁</span>",
+      "<span foreground='#cba6f7'>▂</span>",
+      "<span foreground='#cba6f7'>▃</span>",
+      "<span foreground='#cba6f7'>▄</span>",
+      "<span foreground='#89b4fa'>▅</span>",
+      "<span foreground='#89b4fa'>▆</span>",
+      "<span foreground='#89b4fa'>▇</span>",
+      "<span foreground='#89b4fa'>█</span>"
+    ]
+  }
 }
