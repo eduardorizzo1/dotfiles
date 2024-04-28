@@ -12,17 +12,53 @@ window#waybar {
 }
 
 window > box {
-  background: transparent;
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 4px;
-  border-radius: 16px;
+  background: rgba(22, 22, 30, 0.9);
+  margin: 4px 16px 0px 16px;
+  border-radius: 32px;
+  padding: 4px;
 }
 
 tooltip {
   background: @bg_dark;
   border: solid 0.8px @blue;
-  border-radius: 16px;
+  border-radius: 32px;
+}
+
+#custom-arch,
+#workspaces,
+#taskbar,
+#pulseaudio.input,
+#pulseaudio.output,
+#bluetooth,
+#network,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#custom-playerlabel,
+#custom-powermenu {
+  padding: 0px 16px;
+  border-radius: 32px;
+  margin: 4px;
+}
+
+#custom-playerctl.play,
+#custom-playerctl.foward,
+#custom-playerctl.backward {
+  padding: 0px 8px;
+}
+
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-playerctl.foward {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+#custom-playerctl.backward:hover,
+#custom-playerctl.play:hover,
+#custom-playerctl.foward:hover {
+  color: @orange;
 }
 
 /************************************************/
@@ -30,31 +66,22 @@ tooltip {
 /***********************************************/
 #custom-arch {
   color: @blue;
-  font-size: 20px;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px;
 
-  margin: 2px 8px 2px 2px;
-  padding: 0px 8px 0px 4px;
+  font-size: 20px;
 }
 
 #taskbar {
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px;
-  margin: 2px 0 2px 8px;
-  padding: 0 4px 0 4px;
+  margin: 2px 0px;
+  padding: 0px 2px;
 }
 
 #workspaces {
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px;
+  background: @bg;
+  font-weight: bold;
+}
 
-  margin: 2px 0 2px 0;
-  padding-left: 4px;
-  padding-right: 4px;
+#workspaces button.empty label {
+  color: @comment;
 }
 
 #workspaces button.active {
@@ -63,7 +90,6 @@ tooltip {
 
 #workspaces button.active label {
   color: @yellow;
-  font-weight: bolder;
   font-size: 22px;
 }
 
@@ -75,160 +101,79 @@ tooltip {
 /***********************************************/
 /***************** [ Center ] ******************/
 /***********************************************/
-#custom-playerctl.backward,
-#custom-playerctl.play,
-#custom-playerctl.foward {
-  font-weight: bold;
-  font-size: 26px;
-  border: solid 0.5px @blue;
-  border-left: none;
-  border-right: none;
-}
-
-#custom-playerctl.backward:hover,
-#custom-playerctl.play:hover,
-#custom-playerctl.foward:hover {
-  color: @orange;
-}
-
 #custom-playerctl.backward {
   color: @magenta;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px 0 0 16px;
-  border-right: none;
-
-  padding: 0px 0px 0px 12px;
 }
 
 #custom-playerctl.play {
   color: @blue;
-  margin: 2px 0;
-  background: @bg_dark;
 }
+
 #custom-playerctl.foward {
   color: @magenta;
-  margin: 2px 0 2px 0;
-  background: @bg_dark;
-
-  padding: 0px 4px 0px 0px;
 }
 
 #custom-playerlabel {
   color: @blue;
-  margin: 2px 0 2px 0;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-left: none;
-  border-right: none;
-
-  padding-left: 8px;
-  padding-right: 2px;
 }
 
 #pulseaudio.output {
   color: @cyan;
-  margin: 2px 0 2px 0;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-left: none;
-  border-right: none;
-
-  padding-left: 8px;
+  background: @bg;
 }
 
 #pulseaudio.input {
   color: @purple;
-  margin: 2px 0 2px 0;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 0 16px 16px 0;
-  border-left: none;
-  padding-left: 8px;
+  background: @bg;
 }
 
 /***********************************************/
 /***************** [ Right ] *******************/
 /***********************************************/
-#memory {
-  color: @blue;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-
-  padding: 0px 8px 0px 8px;
+#tray {
+  margin: 2px 8px 0px 8px;
 }
 
+#cpu,
+#memory,
 #temperature {
-  color: @orange;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-
+  margin: 2px 0px 2px 0px;
   padding: 0px 8px 0px 8px;
 }
 
 #cpu {
   color: @magenta;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-
-  padding: 0px 8px 0px 8px;
 }
 
-#tray {
-  color: @blue;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px 0 0 16px;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
+#memory {
+  color: @orange;
+}
 
-  border-right: none;
-  padding: 0px 8px 0px 10px;
+#bluetooth,
+#network {
+  margin: 2px 0px 2px 0px;
+  font-size: 18px;
 }
 
 #bluetooth {
   color: @blue;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-  border-right: none;
-  border-left: none;
-
-  padding: 0px 2px 0px 2px;
+  padding: 0px 8px 0px 8px;
 }
 
 #network {
   color: @green;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 0 16px 16px 0;
-  margin: 2px 8px 2px 0;
-  padding-left: 2px;
-
-  border-left: none;
-  padding: 0px 8px 0px 8px;
+  padding: 0px 16px 0px 8px;
 }
 
 #clock {
-  color: @cyan;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px;
-  margin: 2px 0 2px 0;
-
+  color: @fg;
+  background: @bg_highlight;
   font-weight: bold;
 }
 
 #custom-powermenu {
   color: @red;
-  font-size: 18px;
-  background: @bg_dark;
-  border: solid 0.5px @blue;
-  border-radius: 16px;
-  margin: 2px 2px 2px 8px;
-
-  padding: 0px 8px 0px 4px;
+  padding-left: 8px;
+  margin-right: 16px;
+  font-size: 20px;
 }

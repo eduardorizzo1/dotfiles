@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 25,
+  "height": 20,
   "spacing": 0,
   "output": [
     "DP-2",
@@ -18,15 +18,17 @@
     "custom/playerctl#backward",
     "custom/playerctl#play",
     "custom/playerctl#foward",
-    "custom/playerlabel",
-    "pulseaudio#output",
-    "pulseaudio#input"
+    "custom/playerlabel"
   ],
 
   "modules-right": [
     "tray",
     "bluetooth",
     "network",
+    "pulseaudio#input",
+    "pulseaudio#output",
+    "memory",
+    "cpu",
     "clock",
     "custom/powermenu"
   ],
@@ -60,15 +62,8 @@
     "format-icons": {
       "active": "󰮯",
       "default": "󰊠",
-      "persistent": "󰊠"
-    }
-  },
-  // ========================
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": " ",
-      "deactivated": " "
+      "persistent": "󰊠",
+      "empty": ""
     }
   },
   // ========================
@@ -78,7 +73,7 @@
   },
   // ========================
   "clock": {
-    "format": " 󰃭 {:%d·%m │ 󰅐 %R}  ",
+    "format": "󰃭 {:%b %d | 󰅐 %R}",
     "format-alt": " 󰅐 {:%R}  ",
     "tooltip-format": "<tt>{calendar}</tt>",
     "rotate": 0,
@@ -114,146 +109,14 @@
       "power-saver": ""
     }
   },
-  // ========================
-  "network": {
-    "interval": 1,
-    "format-wifi": "󰖩 ",
-    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-    "format-ethernet": "󰈀 ",
-    "format-linked": "󰈀 {ifname} (No IP)",
-    "format-disconnected": " 󰖪  ",
-    "format-alt": "<span foreground='#c3e88d'> {bandwidthDownBytes}</span> <span foreground='#ffc777'> {bandwidthUpBytes}</span> ",
-    "tooltip": true
-  },
-  // ========================
-  "pulseaudio": {
-    "format": "{icon} {volume}%  {format_source} ",
-    "format-bluetooth": " {volume}% {icon} {format_source} ",
-    "format-bluetooth-muted": "  {icon} {format_source} ",
-    "format-muted": "  {format_source} ",
-    "format-source": "  {volume}% ",
-    "format-source-muted": "  ",
-    "max-volume": 100,
-    "format-icons": {
-      "headphone": "   ",
-      "hands-free": "  ",
-      "headset": "  ",
-      "phone": "  ",
-      "portable": "  ",
-      "car": " ",
-      "default": [
-        "  ",
-        "  ",
-        "  "
-      ]
-    },
-    "on-click": "pavucontrol"
-  },
 
-  "pulseaudio#input": {
-    "format-source": " {volume}%  ",
-    "format-source-muted": "   ",
-    "format": "{format_source}",
-    "scroll-step": 1,
-    "smooth-scrolling-threshold": 1,
-    "max-volume": 100,
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-    "on-click-middle": "pavucontrol",
-    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
-  },
-  "pulseaudio#output": {
-    "format": "{icon} {volume}% ",
-    "format-muted": "",
-    "format-icons": {
-        "default": ["", "", " ", " "] // "󰕾"
-    },
-    "max-volume": 100,
-    "scroll-step": 2,
-    "smooth-scrolling-threshold": 1,
-    "on-click": "pavucontrol",
-    "on-click-middle": "pavucontrol"
-  },
-  "wireplumber": {
-      "format": "{icon} {volume}%",
-      "format-icons": ["", "", "󰕾", ""],
-      "tooltip": false
-  },
-  // ========================
-  "bluetooth": {
-    "format": "<span color='#82aaff'></span>",
-    "format-disabled": "<span color='#2f334d'></span>", // an empty format will hide the module
-    "format-connected": "<span color='#82aaff'></span> {num_connections} ",
-    "tooltip-format": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}   {device_address} "
-  },
-  // ========================
-  "custom/powermenu": {
-    "format": "  ",
-    "on-click": "wlogout --protocol layer-shell",
-    "tooltip": false
-  },
-  // ========================
-  "hyprlnd/window": {
-    "format": "{}",
-    "separate-outputs": false
-  },
-  // ========================
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 22,
-    "icon-theme": "${i_theme}",
-    "spacing": 0,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "on-click-right": "fullscreen"
-  },
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "interval": 10,
-    "consume-icons": {
-      "on": " " // Icon shows only when "consume" is on
-    },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
-      "on": " "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    },
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
-  },
-  "custom/arch": {
-    "format": "  ",
-    "interval": "once",
+  "cpu": {
+    "format": " {usage}%",
     "tooltip": false
   },
 
-  "custom/space_1x": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/space_2x": {
-    "format": "  ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/space_3x": {
-    "format": "   ",
-    "interval": "once",
-    "tooltip": false
+  "memory": {
+    "format": " {}%"
   },
 
   "temperature": {
@@ -261,33 +124,90 @@
     "format": "{icon} {temperatureC}°C",
     "format-icons": [""," ", " "]
   },
-  "cpu": {
-    "format": " {usage}%",
+
+  // ========================
+  "network": {
+    "interval": 1,
+    "format-wifi": "󰖩",
+    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "format-ethernet": "󰈀",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪",
+    "format-alt": "<span foreground='#c3e88d'> {bandwidthDownBytes}</span> <span foreground='#ffc777'> {bandwidthUpBytes}</span> ",
+    "tooltip": true
+  },
+
+  "pulseaudio#output": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "max-volume": 100,
+    "scroll-step": 2,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "format-icons": {
+        "default": ["", "", " ", " "] // "󰕾"
+    }
+  },
+
+  "pulseaudio#input": {
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "format": "{format_source}",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "max-volume": 100,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": "pavucontrol -t 4",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+  },
+
+  "bluetooth": {
+    "format": "<span color='#82aaff'></span>",
+    "format-disabled": "<span color='#2f334d'></span>", // an empty format will hide the module
+    "format-connected": "<span color='#82aaff'></span>{num_connections} ",
+    "tooltip-format": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}   {device_address} "
+  },
+
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "wlogout --protocol layer-shell",
     "tooltip": false
   },
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜"
-    },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
+
+  "hyprlnd/window": {
+    "format": "{}",
+    "separate-outputs": false
   },
-  "memory": {
-    "format": " {}%"
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "icon-theme": "${i_theme}",
+    "spacing": 0,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "fullscreen"
   },
+
+  "custom/arch": {
+    "format": "",
+    "interval": "once",
+    "tooltip": false
+  },
+
   "custom/playerctl#backward": {
-      "format": "󰙣 ",
+      "format": "󰙣",
       "on-click": "playerctl previous",
       "on-scroll-down": "playerctl volume .05-",
       "on-scroll-up": "playerctl volume .05+"
   },
 
   "custom/playerctl#foward": {
-    "format": "󰙡 ",
+    "format": "󰙡",
     "on-click": "playerctl next",
     "on-scroll-down": "playerctl volume .05-",
     "on-scroll-up": "playerctl volume .05+"
@@ -296,9 +216,9 @@
   "custom/playerctl#play": {
     "format": "{icon}",
     "format-icons": {
-      "Paused": "<span> </span>",
-      "Playing": "<span>󰏥 </span>",
-      "Stopped": "<span> </span>"
+      "Paused": "<span></span>",
+      "Playing": "<span>󰏥</span>",
+      "Stopped": "<span></span>"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-down": "playerctl volume .05-",
