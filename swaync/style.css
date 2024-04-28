@@ -1,7 +1,7 @@
 @import "./themes/tokyonight-moon.css";
 
 * {
-  font-family: Hack;
+  font-family: Cascadia Code;
 }
 
 .control-center .notification-row:focus,
@@ -17,17 +17,16 @@
 }
 
 .notification {
-  background: @bg;
+  background: @bg_dark;
   color: @fg;
   border: 2px solid @blue;
-  border-radius: 8px;
+  border-radius: 16px;
   margin: 3px -2px 3px 0px;
-  padding: 4px;
-  box-shadow: 10px 10px 10px;
+  padding: 8px;
 }
 
 .notification-content {
-  background: @bg;
+  background: transparent;
 }
 
 .notification-default-action {
@@ -42,8 +41,8 @@
   text-shadow: none;
   padding: 2px;
   border-radius: 12px;
-  margin-top: 4px;
-  margin-right: 4px;
+  margin-top: 16px;
+  margin-right: 16px;
 }
 
 .close-button:hover {
