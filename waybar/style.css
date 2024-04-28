@@ -3,24 +3,26 @@
 * {
   font-family: "Cascadia Code";
   font-weight: 600;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 0px;
-  min-height: 12px;
+  font-size: 16px;
   color: @fg;
-  margin-bottom: 0;
 }
 
 window#waybar {
   background: transparent;
 }
 
+window > box {
+  background: transparent;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 4px;
+  border-radius: 16px;
+}
+
 tooltip {
-  background: @bg;
+  background: @bg_dark;
   border: solid 0.8px @blue;
   border-radius: 16px;
-  padding: 12px;
 }
 
 /************************************************/
@@ -29,37 +31,33 @@ tooltip {
 #custom-arch {
   color: @blue;
   font-size: 20px;
-  background: #000;
-  margin: 2px 0 2px 8px;
-  padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 16px 0px 0px 16px;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 16px;
 
-  padding: 0px 8px 0px 8px;
+  margin: 2px 8px 2px 2px;
+  padding: 0px 8px 0px 4px;
 }
 
 #taskbar {
-  background: #000;
-  margin: 2px 0 2px 0;
-  border: solid 0.8px @blue;
-  border-radius: 0px;
-  border-left: none;
-  border-right: none;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 16px;
+  margin: 2px 0 2px 8px;
+  padding: 0 4px 0 4px;
 }
 
 #workspaces {
-  background: #000;
-  background: #000;
-  margin: 2px 0 2px 0;
-  border: solid 0.8px @blue;
-  border-radius: 0px 16px 16px 0px;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 16px;
 
+  margin: 2px 0 2px 0;
   padding-left: 4px;
   padding-right: 4px;
 }
 
 #workspaces button.active {
-  border-radius: 50%;
   transition: all 0.5s ease-in-out;
 }
 
@@ -70,8 +68,8 @@ tooltip {
 }
 
 #workspaces button label {
-  font-size: 20px;
   color: @blue;
+  font-size: 20px;
 }
 
 /***********************************************/
@@ -82,26 +80,9 @@ tooltip {
 #custom-playerctl.foward {
   font-weight: bold;
   font-size: 26px;
-}
-
-#pulseaudio.output {
-  color: @cyan;
-  background: #000;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0;
-  border-right: none;
-}
-
-#pulseaudio.input {
-  color: @purple;
-  background: #000;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 16px 16px 0px;
+  border: solid 0.5px @blue;
   border-left: none;
+  border-right: none;
 }
 
 #custom-playerctl.backward:hover,
@@ -109,47 +90,63 @@ tooltip {
 #custom-playerctl.foward:hover {
   color: @orange;
 }
+
 #custom-playerctl.backward {
   color: @magenta;
-  background: #000;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 16px 0px 0px 16px;
+  background: @bg;
+  border: solid 0.5px @blue;
+  border-radius: 16px 0 0 16px;
   border-right: none;
 
   padding: 0px 0px 0px 12px;
 }
+
 #custom-playerctl.play {
   color: @blue;
-  background: #000;
   margin: 2px 0;
-  border: solid 0.8px @blue;
-  border-radius: 0px;
-  border-right: none;
-  border-left: none;
+  background: @bg;
 }
 #custom-playerctl.foward {
   color: @magenta;
-  background: #000;
   margin: 2px 0 2px 0;
-  border: solid 0.8px @blue;
-  border-radius: 0px;
-  border-left: none;
-  border-right: none;
+  background: @bg;
 
   padding: 0px 4px 0px 0px;
 }
+
 #custom-playerlabel {
   color: @blue;
-  background: #000;
   margin: 2px 0 2px 0;
-  padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0;
+  background: @bg;
+  border: solid 0.5px @blue;
+  border-left: none;
   border-right: none;
 
+  padding-left: 8px;
   padding-right: 2px;
+}
+
+#pulseaudio.output {
+  color: @cyan;
+  margin: 2px 0 2px 0;
+  background: @bg;
+  border: solid 0.5px @blue;
+  border-left: none;
+  border-right: none;
+
+  padding-left: 8px;
+}
+
+#pulseaudio.input {
+  color: @purple;
+  margin: 2px 0 2px 0;
+  background: @bg;
+  border: solid 0.5px @blue;
+  border-radius: 0 16px 16px 0;
+  border-left: none;
+  padding-left: 8px;
 }
 
 /***********************************************/
@@ -157,96 +154,81 @@ tooltip {
 /***********************************************/
 #memory {
   color: @blue;
-  background: #000;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 0px 0px 0px;
-  border-right: none;
 
   padding: 0px 8px 0px 8px;
 }
 
 #temperature {
   color: @orange;
-  background: #000;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 0px 0px 0px;
-  border-right: none;
 
   padding: 0px 8px 0px 8px;
 }
 
 #cpu {
   color: @magenta;
-  background: #000;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 0px 0px 0px;
-  border-right: none;
 
   padding: 0px 8px 0px 8px;
 }
 
 #tray {
   color: @blue;
-  background: #000;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 16px 0 0 16px;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 16px 0px 0px 16px;
-  border-right: none;
 
+  border-right: none;
   padding: 0px 8px 0px 10px;
 }
 
 #bluetooth {
   color: @blue;
-  background: #000;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 0px 0px 0px;
   border-right: none;
+  border-left: none;
 
-  padding: 0px 8px 0px 8px;
+  padding: 0px 2px 0px 2px;
 }
 
 #network {
   color: @green;
-  background: #000;
-  margin: 2px 0 2px 0;
-  padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 0px 0px 0px;
-  border-right: none;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 0 16px 16px 0;
+  margin: 2px 8px 2px 0;
+  padding-left: 2px;
 
+  border-left: none;
   padding: 0px 8px 0px 8px;
 }
 
 #clock {
   color: @cyan;
-  background: #000;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 16px;
   margin: 2px 0 2px 0;
-  padding-left: 8px;
-  border: solid 0.8px @blue;
-  border-radius: 0px 0px 0px 0px;
-  border-right: none;
 
-  padding: 0px 8px 0px 8px;
   font-weight: bold;
 }
 
 #custom-powermenu {
   color: @red;
   font-size: 18px;
-  background: #000;
-  margin: 2px 12px 2px 0;
-  border: solid 0.8px @blue;
-  border-radius: 0px 16px 16px 0px;
+  background: @bg_dark;
+  border: solid 0.5px @blue;
+  border-radius: 16px;
+  margin: 2px 2px 2px 8px;
 
-  padding: 0px 12px 0px 4px;
+  padding: 0px 8px 0px 4px;
 }
