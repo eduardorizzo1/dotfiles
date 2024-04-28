@@ -95,7 +95,7 @@ tooltip {
   color: @magenta;
   margin: 2px 0 2px 0;
   padding-left: 8px;
-  background: @bg;
+  background: @bg_dark;
   border: solid 0.5px @blue;
   border-radius: 16px 0 0 16px;
   border-right: none;
@@ -106,12 +106,12 @@ tooltip {
 #custom-playerctl.play {
   color: @blue;
   margin: 2px 0;
-  background: @bg;
+  background: @bg_dark;
 }
 #custom-playerctl.foward {
   color: @magenta;
   margin: 2px 0 2px 0;
-  background: @bg;
+  background: @bg_dark;
 
   padding: 0px 4px 0px 0px;
 }
@@ -119,7 +119,7 @@ tooltip {
 #custom-playerlabel {
   color: @blue;
   margin: 2px 0 2px 0;
-  background: @bg;
+  background: @bg_dark;
   border: solid 0.5px @blue;
   border-left: none;
   border-right: none;
@@ -131,7 +131,7 @@ tooltip {
 #pulseaudio.output {
   color: @cyan;
   margin: 2px 0 2px 0;
-  background: @bg;
+  background: @bg_dark;
   border: solid 0.5px @blue;
   border-left: none;
   border-right: none;
@@ -142,7 +142,7 @@ tooltip {
 #pulseaudio.input {
   color: @purple;
   margin: 2px 0 2px 0;
-  background: @bg;
+  background: @bg_dark;
   border: solid 0.5px @blue;
   border-radius: 0 16px 16px 0;
   border-left: none;
