@@ -2,27 +2,28 @@
 
 sudo yabai --load-sa
 
+# brew tap FelixKratz/formulae && brew install borders
+borders active_color=0xff82aaff inactive_color=0xff000000 width=5.0 &
+
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 yabai -m rule --add app='^System Information$' manage=off
 yabai -m rule --add app='^System Preferences$' manage=off
 yabai -m rule --add title='Preferences$' manage=off
 yabai -m rule --add title='Settings$' manage=off
 yabai -m config layout bsp \
-	top_padding 2 \
-	bottom_padding 2 \
-	left_padding 2 \
-	right_padding 2 \
-	window_gap 2 \
+	top_padding 8 \
+	bottom_padding 8 \
+	left_padding 8 \
+	right_padding 8 \
+	window_gap 12 \
 	window_border on \
-	window_border_radius 12 \
-	windo_border_width 2 \
+	window_border_radius 14 \
 	window_placement second_child \
 	window_topmost off \
-	window_opacity off \
+	window_opacity on \
 	window_shadow off \
 	window_opacity_duration 0.15 \
-	active_window_border_color 0xFF7AA2F7 \
-	normal_window_border_color 0x002E3440 \
+	window_border_blur on \
 	insert_feedback_color 0xFFFFFFFF \
 	active_window_opacity 1.0 \
 	normal_window_opacity 0.90 \
@@ -32,7 +33,6 @@ yabai -m config layout bsp \
 	mouse_action1 move \
 	mouse_action2 resize \
 	mouse_follows_focus off \
-	mouse_drop_action swap \
-	window_border_blur off
+	mouse_drop_action swap
 
 echo "yabai configuration loaded.."
