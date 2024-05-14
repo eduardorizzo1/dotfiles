@@ -1,10 +1,11 @@
 @import "./themes/tokyonight-moon.css";
 
 * {
-  font-family: "Cascadia Code";
+  font-family: "Hack Nerd Font";
   font-weight: 600;
   font-size: 16px;
   color: @fg;
+  margin: 0;
 }
 
 window#waybar {
@@ -12,8 +13,8 @@ window#waybar {
 }
 
 window > box {
-  background: rgba(22, 22, 30, 0.9);
-  margin: 4px 16px 0px 16px;
+  background: transparent;
+  margin: 2px 16px 0px 16px;
   border-radius: 32px;
   padding: 4px;
 }
@@ -36,47 +37,26 @@ tooltip {
 #memory,
 #temperature,
 #custom-playerlabel,
+#tray,
 #custom-powermenu {
   padding: 0px 16px;
   border-radius: 32px;
-  margin: 4px;
+  margin: 0 4px;
+  /* background: rgba(22, 22, 30, 0.75); */
+  background: @bg_dark;
 }
 
-#custom-playerctl.play,
-#custom-playerctl.foward,
-#custom-playerctl.backward {
-  padding: 0px 8px;
-}
-
-#custom-playerctl.backward,
-#custom-playerctl.play,
-#custom-playerctl.foward {
-  font-weight: bold;
-  font-size: 28px;
-}
-
-#custom-playerctl.backward:hover,
-#custom-playerctl.play:hover,
-#custom-playerctl.foward:hover {
-  color: @orange;
-}
-
-/************************************************/
-/***************** [ Left ] ******************/
+/***********************************************/
+/***************** [ Left ] ********************/
 /***********************************************/
 #custom-arch {
   color: @blue;
 
+  padding-right: 20px;
   font-size: 20px;
 }
 
-#taskbar {
-  margin: 2px 0px;
-  padding: 0px 2px;
-}
-
 #workspaces {
-  background: @bg;
   font-weight: bold;
 }
 
@@ -85,7 +65,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #workspaces button.active label {
@@ -99,46 +79,101 @@ tooltip {
 }
 
 /***********************************************/
-/***************** [ Center ] ******************/
+/**************** [ Media Player ] *************/
 /***********************************************/
+#custom-playerctl.play,
+#custom-playerctl.foward,
+#custom-playerctl.backward,
+#custom-playerlabel {
+  padding: 0px 8px;
+  border-right: none;
+  border-left: none;
+  font-weight: bold;
+}
+
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-playerctl.foward {
+  background: @bg_dark;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+#custom-playerctl.backward:hover,
+#custom-playerctl.play:hover,
+#custom-playerctl.foward:hover {
+  color: @orange;
+}
 #custom-playerctl.backward {
   color: @magenta;
+  border-radius: 32px 0 0 32px;
+  border-right: none;
+  padding-left: 16px;
 }
 
 #custom-playerctl.play {
   color: @blue;
+  border-right: none;
+  border-left: none;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 #custom-playerctl.foward {
   color: @magenta;
+  padding-right: 16px;
+  border-right: none;
+  border-left: none;
 }
 
 #custom-playerlabel {
   color: @blue;
+  background: @bg_dark;
+  border-radius: 0;
+  margin: 0px;
 }
 
 #pulseaudio.output {
   color: @cyan;
-  background: @bg;
+  background: @bg_dark;
+  border-radius: 0;
+  margin: 0px;
+  padding-left: 4px;
+  border-right: none;
+  border-left: none;
 }
 
 #pulseaudio.input {
   color: @purple;
-  background: @bg;
+  background: @bg_dark;
+  border-radius: 0 32px 32px 0;
+  margin: 0px;
+  padding-left: 4px;
+  border-left: none;
 }
 
 /***********************************************/
 /***************** [ Right ] *******************/
 /***********************************************/
-#tray {
-  margin: 2px 8px 0px 8px;
+#bluetooth,
+#network {
+  font-size: 18px;
+}
+
+#memory,
+#bluetooth {
+  border-radius: 32px 0 0 32px;
+  margin-right: 0px;
+  padding-right: 8px;
+  border-right: none;
 }
 
 #cpu,
-#memory,
-#temperature {
-  margin: 2px 0px 2px 0px;
-  padding: 0px 8px 0px 8px;
+#network {
+  border-radius: 0 32px 32px 0;
+  border-left: none;
+  margin-left: 0px;
+  padding-left: 2px;
 }
 
 #cpu {
@@ -147,33 +182,34 @@ tooltip {
 
 #memory {
   color: @orange;
-}
-
-#bluetooth,
-#network {
-  margin: 2px 0px 2px 0px;
-  font-size: 18px;
+  border-left: none;
 }
 
 #bluetooth {
   color: @blue;
-  padding: 0px 8px 0px 8px;
+  padding-left: 20px;
+  padding-right: 2px;
 }
 
 #network {
   color: @green;
-  padding: 0px 16px 0px 8px;
+  margin: 0;
+  padding-right: 28px;
 }
 
 #clock {
-  color: @fg;
-  background: @bg_highlight;
+  color: @cyan;
   font-weight: bold;
 }
 
 #custom-powermenu {
   color: @red;
-  padding-left: 8px;
-  margin-right: 16px;
-  font-size: 20px;
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+#custom-left-separator,
+#custom-right-separator {
+  color: @bg_dark;
+  font-size: 32px;
 }

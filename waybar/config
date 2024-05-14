@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 20,
+  "height": 8,
   "spacing": 0,
   "output": [
     "DP-2",
@@ -18,15 +18,15 @@
     "custom/playerctl#backward",
     "custom/playerctl#play",
     "custom/playerctl#foward",
-    "custom/playerlabel"
+    "custom/playerlabel",
+    "pulseaudio#output",
+    "pulseaudio#input"
   ],
 
   "modules-right": [
     "tray",
     "bluetooth",
     "network",
-    "pulseaudio#input",
-    "pulseaudio#output",
     "memory",
     "cpu",
     "clock",
@@ -74,7 +74,7 @@
   // ========================
   "clock": {
     "format": "󰃭 {:%b %d | 󰅐 %R}",
-    "format-alt": " 󰅐 {:%R}  ",
+    "format-alt": " 󰅐 {:%R} ",
     "tooltip-format": "<tt>{calendar}</tt>",
     "rotate": 0,
     "calendar": {
@@ -143,8 +143,8 @@
     "max-volume": 100,
     "scroll-step": 2,
     "smooth-scrolling-threshold": 1,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pavucontrol -t 3",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "format-icons": {
         "default": ["", "", " ", " "] // "󰕾"
     }
@@ -164,9 +164,9 @@
   },
 
   "bluetooth": {
-    "format": "<span color='#82aaff'></span>",
-    "format-disabled": "<span color='#2f334d'></span>", // an empty format will hide the module
-    "format-connected": "<span color='#82aaff'></span>{num_connections} ",
+    "format": "<span color='#82aaff'> </span>",
+    "format-disabled": "<span color='#2f334d'> </span>", // an empty format will hide the module
+    "format-connected": "<span color='#82aaff'> </span>{num_connections} ",
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}   {device_address} "
   },
