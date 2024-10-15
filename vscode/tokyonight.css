@@ -445,37 +445,37 @@ footer.statusbar {
 .statusbar-item#vscodevim\.vim\.primary[aria-label="-- NORMAL --"]:before {
   content: " NORMAL";
   font-size: 12px;
-  font-family: "Hack Nerd Font FC Ligatured";
+  font-family: "Hack Nerd Font";
   font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label="-- INSERT --"]:before {
   content: " INSERT";
   font-size: 12px;
-  font-family: "Hack Nerd Font FC Ligatured";
+  font-family: "Hack Nerd Font";
   font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label="-- REPLACE --"]:before {
   content: " REPLACE";
   font-size: 12px;
-  font-family: "Hack Nerd Font FC Ligatured";
+  font-family: "Hack Nerd Font";
   font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label="-- VISUAL --"]:before {
   content: " VISUAL";
   font-size: 12px;
-  font-family: "Hack Nerd Font FC Ligatured";
+  font-family: "Hack Nerd Font";
   font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"]:before {
   content: " V-LINE";
   font-size: 12px;
-  font-family: "Hack Nerd Font FC Ligatured";
+  font-family: "Hack Nerd Font";
   font-weight: 500;
 }
 .statusbar-item#vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"]:before {
   content: " V-BLOCK";
   font-size: 12px;
-  font-family: "Hack Nerd Font FC Ligatured";
+  font-family: "Hack Nerd Font";
   font-weight: 500;
 }
 
