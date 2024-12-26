@@ -20,7 +20,7 @@ window > box {
 }
 
 tooltip {
-  background: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
   border: solid 0.8px @blue;
   border-radius: 32px;
 }
@@ -34,6 +34,7 @@ tooltip {
 #network,
 #clock,
 #cpu,
+#battery,
 #memory,
 #temperature,
 #custom-playerlabel,
@@ -42,8 +43,8 @@ tooltip {
   padding: 0px 16px;
   border-radius: 32px;
   margin: 0 4px;
-  /* background: rgba(22, 22, 30, 0.75); */
-  background: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
+  /* background: @bg_dark; */
 }
 
 /***********************************************/
@@ -94,7 +95,7 @@ tooltip {
 #custom-playerctl.backward,
 #custom-playerctl.play,
 #custom-playerctl.foward {
-  background: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
   font-weight: bold;
   font-size: 28px;
 }
@@ -128,14 +129,14 @@ tooltip {
 
 #custom-playerlabel {
   color: @blue;
-  background: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
   border-radius: 0;
   margin: 0px;
 }
 
 #pulseaudio.output {
   color: @cyan;
-  background: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
   border-radius: 0;
   margin: 0px;
   padding-left: 4px;
@@ -145,7 +146,7 @@ tooltip {
 
 #pulseaudio.input {
   color: @purple;
-  background: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
   border-radius: 0 32px 32px 0;
   margin: 0px;
   padding-left: 4px;
@@ -169,7 +170,9 @@ tooltip {
 }
 
 #cpu,
-#network {
+#network,
+#battery
+{
   border-radius: 0 32px 32px 0;
   border-left: none;
   margin-left: 0px;
@@ -178,11 +181,18 @@ tooltip {
 
 #cpu {
   color: @magenta;
+  margin-right: 0;
+  padding-right: 8px;
+  border-radius: 0;
 }
 
 #memory {
   color: @orange;
   border-left: none;
+}
+
+#battery {
+  color: @fg;
 }
 
 #bluetooth {
@@ -210,6 +220,6 @@ tooltip {
 
 #custom-left-separator,
 #custom-right-separator {
-  color: @bg_dark;
+  background: rgba(22, 22, 30, 0.8);
   font-size: 32px;
 }

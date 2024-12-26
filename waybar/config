@@ -1,19 +1,16 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 8,
+  "height": 4,
   "spacing": 0,
   "output": [
-    "DP-2",
-    "HDMI-A-1"
+    "eDP-1"
   ],
-
   "modules-left": [
     "custom/arch",
     "hyprland/workspaces#pacman",
     "wlr/taskbar"
   ],
-
   "modules-center": [
     "custom/playerctl#backward",
     "custom/playerctl#play",
@@ -22,13 +19,13 @@
     "pulseaudio#output",
     "pulseaudio#input"
   ],
-
   "modules-right": [
     "tray",
     "bluetooth",
     "network",
     "memory",
     "cpu",
+    "battery",
     "clock",
     "custom/powermenu"
   ],
@@ -56,7 +53,8 @@
       "1": [],
       "2": [],
       "3": [],
-      "4": []
+      "4": [],
+      "5": []
     },
     "format": "{icon}",
     "format-icons": {
@@ -73,8 +71,8 @@
   },
   // ========================
   "clock": {
-    "format": "󰃭 {:%b %d | 󰅐 %R}",
-    "format-alt": " 󰅐 {:%R} ",
+    "format": " 󰅐 {:%R} ",
+    "format-alt": "󰃭 {:%b %d | 󰅐 %R}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "rotate": 0,
     "calendar": {
@@ -90,11 +88,11 @@
       }
     },
     "actions": {
-        "on-click-right": "mode",
-        "on-click-forward": "tz_up",
-        "on-click-backward": "tz_down",
-        "on-scroll-up": "shift_up",
-        "on-scroll-down": "shift_down"
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
   },
   // ========================
@@ -109,22 +107,22 @@
       "power-saver": ""
     }
   },
-
   "cpu": {
     "format": " {usage}%",
     "tooltip": false
   },
-
   "memory": {
     "format": " {}%"
   },
-
   "temperature": {
     "critical-threshold": 80,
     "format": "{icon} {temperatureC}°C",
-    "format-icons": [""," ", " "]
+    "format-icons": [
+      "",
+      " ",
+      " "
+    ]
   },
-
   // ========================
   "network": {
     "interval": 1,
@@ -136,7 +134,6 @@
     "format-alt": "<span foreground='#c3e88d'> {bandwidthDownBytes}</span> <span foreground='#ffc777'> {bandwidthUpBytes}</span> ",
     "tooltip": true
   },
-
   "pulseaudio#output": {
     "format": "{icon} {volume}%",
     "format-muted": "",
@@ -146,10 +143,14 @@
     "on-click": "pavucontrol -t 3",
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "format-icons": {
-        "default": ["", "", " ", " "] // "󰕾"
+      "default": [
+        "",
+        "",
+        " ",
+        " "
+      ] // "󰕾"
     }
   },
-
   "pulseaudio#input": {
     "format-source": " {volume}%",
     "format-source-muted": " ",
@@ -162,7 +163,6 @@
     "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
     "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
   },
-
   "bluetooth": {
     "format": "<span color='#82aaff'> </span>",
     "format-disabled": "<span color='#2f334d'> </span>", // an empty format will hide the module
@@ -170,18 +170,15 @@
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}   {device_address} "
   },
-
   "custom/powermenu": {
     "format": "",
     "on-click": "wlogout --protocol layer-shell",
     "tooltip": false
   },
-
   "hyprlnd/window": {
     "format": "{}",
     "separate-outputs": false
   },
-
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 20,
@@ -192,27 +189,23 @@
     "on-click-middle": "close",
     "on-click-right": "fullscreen"
   },
-
   "custom/arch": {
     "format": "",
     "interval": "once",
     "tooltip": false
   },
-
   "custom/playerctl#backward": {
-      "format": "󰙣",
-      "on-click": "playerctl previous",
-      "on-scroll-down": "playerctl volume .05-",
-      "on-scroll-up": "playerctl volume .05+"
+    "format": "󰙣",
+    "on-click": "playerctl previous",
+    "on-scroll-down": "playerctl volume .05-",
+    "on-scroll-up": "playerctl volume .05+"
   },
-
   "custom/playerctl#foward": {
     "format": "󰙡",
     "on-click": "playerctl next",
     "on-scroll-down": "playerctl volume .05-",
     "on-scroll-up": "playerctl volume .05+"
   },
-
   "custom/playerctl#play": {
     "format": "{icon}",
     "format-icons": {
@@ -226,7 +219,6 @@
     "return-type": "json",
     "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
   },
-
   "custom/playerlabel": {
     "format": "<span>󰎈 {} 󰎈</span>",
     "max-length": 20,
@@ -234,7 +226,6 @@
     "return-type": "json",
     "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
   },
-
   "cava#left": {
     "autosens": 10,
     "bar_delimiter": 0,
@@ -284,5 +275,23 @@
       "<span foreground='#89b4fa'>▇</span>",
       "<span foreground='#89b4fa'>█</span>"
     ]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": "{capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-full": " {capacity}%",
+    "format-icons": [
+      "", // dying
+      "", // 
+      "", //
+      "", //
+      ""
+    ], //full
   }
 }

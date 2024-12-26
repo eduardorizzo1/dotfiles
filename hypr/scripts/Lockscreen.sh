@@ -1,3 +1,3 @@
 #!/bin/bash
-sleep 0.5
+sleep 0.25
 hyprlock
