@@ -1,0 +1,38 @@
+editor: nvim
+
+name: tokyonight-night
+primary: "#7dcfff" # buttons, fixed table columns
+secondary: "#bb9af7" # method selector, some minor labels
+accent: "#7aa2f7" # header text, scrollbars, cursors, focus highlights
+background: "#000000" # background colors
+surface: "#0c0e14" # panels, etc
+error: "#f7768e" # error messages
+success: "#73daca" # success messages
+warning: "#e0af68" # warning messages
+
+text_area:
+  #cursor: "reverse" # style the block cursor
+  #cursor_line: "underline #292e42" # style the line the cursor is on
+  selection: "reverse" # style the selected text
+  gutter: "#7dcfff" # style the gutter
+  matched_bracket: "#e0af68" # style the matched bracket
+
+url:
+  base: "#7dcfff" # style the 'base' of the url
+  protocol: "bold #c0caf5" # style the protocol
+
+syntax:
+  json_key: "#73daca" # style json keys
+  json_number: "#7dcfff" # style json numbers
+  json_string: "#9ece6a" # style json strings
+  json_boolean: "bold #bb9af7" # style json booleans
+  json_null: "underline #bb9af7" # style json null values
+
+method:
+  get: "bold #bb9af7"
+  post: "bold #7dcfff"
+  put: "bold #e0af68"
+  delete: "bold #f7768e"
+  patch: "bold #9ece6a"
+  options: "bold #9d7cd8"
+  head: "bold #1abc9c"
