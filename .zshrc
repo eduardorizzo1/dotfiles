@@ -8,16 +8,7 @@ export PATH=$PATH:~/.cargo/bin:$PATH            #NOTE: Cargo
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=0  #NOTE: Dotnet
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk   #NOTE: Java
 
-#==========================
-#========[ Pyenv ]=========
-#==========================
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-#============================
-#========[ Android ]=========
-#============================
+#=====[ Android ]======
 export ANDROID_HOME=~/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -26,29 +17,24 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/android-studio/bin
 export PATH=$PATH:/opt/gradle/gradle-7.6.4/bin
 
-
-#===========================
-#==========[ NVM ]==========
-#===========================
+#=====[ NVM ]=====
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#=============================
-#==========[ Alias ]==========
-#=============================
-alias g lg="lazygit"
-alias cl="clear"
-
-plugins=(git)
+#=====[ Alias ]=====
+alias yz='yazi'
+alias ls='lsd' # lsd
+alias l='ls -l' # eza
+alias la='ls -a'
+alias lt='ls --tree'
+alias g lg='lazygit'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#=================================
-#==========[ Oh-my-zsh ]==========
-#=================================
+#=====[ Oh-my-zsh ]=====
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 #ZSH_THEME="powerlevel10k/powerlevel10k" # "agnoster", "spaceship"
