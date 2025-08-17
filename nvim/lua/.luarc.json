@@ -1,0 +1,41 @@
+{
+    "workspace.library": [
+        "/usr/share/nvim/runtime/lua",
+        "/home/eduardo/.local/share/nvim/lazy/vim-illuminate/lua",
+        "/home/eduardo/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/home/eduardo/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/dracula.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/home/eduardo/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-treesitter-textobjects/lua",
+        "/home/eduardo/.local/share/nvim/lazy/telescope-fzf-native.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-scrollbar/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-tree.lua/lua",
+        "/home/eduardo/.local/share/nvim/lazy/cmp-cmdline/lua",
+        "/home/eduardo/.local/share/nvim/lazy/bufferline.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/lualine.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/mason.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/home/eduardo/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-web-devicons/lua",
+        "/home/eduardo/.local/share/nvim/lazy/nvim-autopairs/lua",
+        "/home/eduardo/.local/share/nvim/lazy/mini.surround/lua",
+        "/home/eduardo/.local/share/nvim/lazy/cmp-buffer/lua",
+        "/home/eduardo/.local/share/nvim/lazy/hop.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/indent-blankline.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/LuaSnip/lua",
+        "/home/eduardo/.local/share/nvim/lazy/cmp-path/lua",
+        "/home/eduardo/.local/share/nvim/lazy/dashboard-nvim/lua",
+        "/home/eduardo/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/home/eduardo/.local/share/nvim/lazy/cmp-nvim-lua/lua",
+        "/home/eduardo/.config/nvim/lua",
+        "${3rd}/luv/library",
+        "${3rd}/luassert/library"
+    ],
+    "diagnostics.globals": [
+        "vim",
+        "LazyVim"
+    ]
+}
