@@ -13,6 +13,7 @@ blueman
 bluez
 bluez-utils
 udiskie
+polkit-kde-agent
 
 dolphin
 kvantum
