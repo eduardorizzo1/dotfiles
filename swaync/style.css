@@ -1,4 +1,4 @@
-@import "./themes/tokyonight-moon.css";
+@import "./themes/tokyonight-night.css";
 
 * {
   font-family: Cascadia Code;
@@ -22,7 +22,8 @@
   border: 2px solid @blue;
   border-radius: 16px;
   margin: 3px -2px 3px 0px;
-  padding: 8px;
+  padding: 16px;
+  min-height: 48px;
 }
 
 .notification-content {
