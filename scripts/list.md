@@ -4,6 +4,8 @@
 
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+xdg-user-dirs
 nwg-displays
 nwg-look-bin
 
@@ -18,13 +20,17 @@ polkit-kde-agent
 dolphin
 kvantum
 kvantum-qt5
+kvantum-qt6-git
 tokyonight-gtk-theme-git
+tela-circle-icon-theme-all
 bibata-cursor-git
 ffmpegthumbs
 kde-cli-tools
 kservice5
 imagemagick
 qt5-imageformats
+
+# cp dolphinrc and kdeglobals > .config/
 
 ark
 p7zip
@@ -80,3 +86,9 @@ ttf-hack-ligatured
 ttf-hack
 noto-fonts
 noto-fonts-emoji
+
+sddm
+sddm-sugar-candy-git
+qt5-quickcontrols2
+qt5-graphicaleffects
+qt5-svg
