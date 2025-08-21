@@ -16,6 +16,7 @@ bluez
 bluez-utils
 udiskie
 polkit-kde-agent
+jq
 
 dolphin
 kvantum
@@ -49,6 +50,7 @@ cliphist
 swappy
 wl-clipboard
 slurp
+grimblast-git
 
 wtype
 gwenview
