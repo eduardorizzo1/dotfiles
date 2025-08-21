@@ -67,6 +67,7 @@ brightnessctl
 pamixer
 
 yazi
+eza
 tmux
 google-chrome
 firefox
