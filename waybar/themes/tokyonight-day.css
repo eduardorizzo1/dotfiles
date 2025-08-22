@@ -1,0 +1,43 @@
+@define-color bg              #e1e2e7;
+@define-color bg_dark         #d0d5e3;
+@define-color bg_dark1        #c1c9df;
+@define-color bg_highlight    #c4c8da;
+
+@define-color terminal_black  #b4b5b9;
+
+@define-color fg              #3760bf;
+@define-color fg_dark         #6172b0;
+@define-color fg_gutter       #a8aecb;
+
+@define-color dark3           #8990b3;
+@define-color comment         #848cb5;
+@define-color dark5           #68709a;
+
+@define-color blue0           #7890dd;
+@define-color blue            #2e7de9;
+@define-color cyan            #007197;
+@define-color blue1           #188092;
+@define-color blue2           #07879d;
+@define-color blue5           #006a83;
+@define-color blue6           #2e5857;
+@define-color blue7           #92a6d5;
+
+@define-color purple          #7847bd;
+@define-color magenta         #9854f1;
+@define-color magenta2        #d20065;
+
+@define-color orange          #b15c00;
+@define-color yellow          #8c6c3e;
+
+@define-color green           #587539;
+@define-color green1          #387068;
+@define-color green2          #38919f;
+@define-color teal            #118c74;
+
+@define-color red             #f52a65;
+@define-color red1            #c64343;
+
+/* git */
+@define-color git_add         #4197a4;
+@define-color git_change      #506d9c;
+@define-color git_delete      #c47981;

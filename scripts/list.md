@@ -41,6 +41,8 @@ hyprpaper
 hyprgrass
 hyprpicker
 hypridle
+hyprlock
+hyprspace
 wlogout
 swaylock-effects
 
