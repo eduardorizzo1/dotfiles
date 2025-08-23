@@ -12,11 +12,10 @@ window#waybar {
 }
 
 window > box {
-  /* background: transparent; */
-  /* background: rgba(22, 22, 30, 0.85); */
-  margin: 0 4px;
+  margin: 0 8px;
   border-radius: 32px;
-  padding: 4px;
+  padding: 2px;
+  background: transparent;
 }
 
 tooltip {
@@ -24,8 +23,6 @@ tooltip {
   border-radius: 16px;
 }
 
-#custom-arch,
-#workspaces,
 #taskbar,
 #pulseaudio.input,
 #pulseaudio.output,
@@ -42,7 +39,27 @@ tooltip {
   padding: 0px 16px;
   border-radius: 32px;
   margin: 0 4px;
-  background: @bg;
+}
+
+#custom-arch,
+#workspaces,
+#taskbar,
+#pulseaudio.input,
+#pulseaudio.output,
+#bluetooth,
+#network,
+#clock,
+#cpu,
+#battery,
+#memory,
+#temperature,
+#custom-playerlabel,
+#tray,
+#custom-powermenu,
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-playerctl.foward {
+  background: @bg_blur;
 }
 
 /***********************************************/
@@ -50,7 +67,6 @@ tooltip {
 /***********************************************/
 #custom-arch {
   color: @blue;
-
   padding-right: 20px;
   font-size: 20px;
 }
@@ -94,8 +110,6 @@ tooltip {
 #custom-playerctl.backward,
 #custom-playerctl.play,
 #custom-playerctl.foward {
-  /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
   font-weight: bold;
   font-size: 28px;
 }
@@ -129,15 +143,12 @@ tooltip {
 
 #custom-playerlabel {
   color: @blue;
-  background: @bg;
   border-radius: 0;
   margin: 0px;
 }
 
 #pulseaudio.output {
   color: @cyan;
-  /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
   border-radius: 0;
   margin: 0px;
   padding-left: 4px;
@@ -147,8 +158,6 @@ tooltip {
 
 #pulseaudio.input {
   color: @purple;
-  /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
   border-radius: 0 32px 32px 0;
   margin: 0px;
   padding-left: 4px;
@@ -164,6 +173,7 @@ tooltip {
 }
 
 #memory,
+#custom-arch,
 #bluetooth {
   border-radius: 32px 0 0 32px;
   margin-right: 0px;
@@ -173,8 +183,8 @@ tooltip {
 
 #cpu,
 #network,
-#battery
-{
+#battery,
+#workspaces {
   border-radius: 0 32px 32px 0;
   border-left: none;
   margin-left: 0px;
@@ -222,7 +232,16 @@ tooltip {
 
 #custom-left-separator,
 #custom-right-separator {
-  background: @bg;
   font-size: 32px;
 }
 
+#custom-arch {
+  background: @blue;
+  color: @bg;
+  padding: 0 16px;
+}
+
+#workspaces {
+  border: solid 2px @blue;
+  border-radius: 32px;
+}

@@ -37,7 +37,9 @@
 @define-color red             #f7768e;
 @define-color red1            #db4b4b;
 
-/* git */
 @define-color git_add         #449dab;
 @define-color git_change      #6183bb;
 @define-color git_delete      #914c54;
+
+@define-color bg_blur         rgba(12, 14, 20, 0.9);
+@define-color line            rgba(192, 202, 245, 0.1);

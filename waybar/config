@@ -18,15 +18,15 @@
       "custom/playerctl#play",
       "custom/playerctl#foward",
       "custom/playerlabel",
-      "pulseaudio#output",
-      "pulseaudio#input"
     ],
     "modules-right": [
-      "tray",
-      "bluetooth",
-      "network",
       "memory",
       "cpu",
+      "tray",
+      "pulseaudio#output",
+      "pulseaudio#input",
+      "network",
+      "bluetooth",
       "battery",
       "clock",
       "custom/powermenu"
@@ -127,17 +127,17 @@
     // ========================
     "network": {
       "interval": 1,
-      "format-wifi": "󰖩",
+      "format-wifi": "󰖩 ",
       "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
       "format-ethernet": "󰈀",
       "format-linked": "󰈀 {ifname} (No IP)",
-      "format-disconnected": "󰖪",
+      "format-disconnected": "󰖪 ",
       "format-alt": "<span foreground='#c3e88d'> {bandwidthDownBytes}</span> <span foreground='#ffc777'> {bandwidthUpBytes}</span> ",
       "tooltip": true
     },
     "pulseaudio#output": {
       "format": "{icon} {volume}%",
-      "format-muted": "",
+      "format-muted": " x",
       "max-volume": 100,
       "scroll-step": 2,
       "smooth-scrolling-threshold": 1,
@@ -145,8 +145,8 @@
       "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
       "format-icons": {
         "default": [
-          "",
-          "",
+          " ",
+          " ",
           " ",
           " "
         ] // "󰕾"
@@ -192,7 +192,6 @@
     },
     "custom/arch": {
       "format": "",
-      "interval": "once",
       "tooltip": false
     },
     "custom/playerctl#backward": {
@@ -208,7 +207,7 @@
       "on-scroll-up": "playerctl volume .05+"
     },
     "custom/playerctl#play": {
-      "format": "{icon}",
+      "format": "",
       "format-icons": {
         "Paused": "<span></span>",
         "Playing": "<span>󰏥</span>",
@@ -217,15 +216,15 @@
       "on-click": "playerctl play-pause",
       "on-scroll-down": "playerctl volume .05-",
       "on-scroll-up": "playerctl volume .05+",
-      "return-type": "json",
-      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+      "return-type": "json"
     },
     "custom/playerlabel": {
-      "format": "<span>󰎈 {} 󰎈</span>",
+      "format": "<span>󰎈 {text}</span>",
       "max-length": 20,
       "on-click": "",
+      "interval": 1,
       "return-type": "json",
-      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+      "exec": "bash -lc 'if playerctl status 2>/dev/null | grep -qx Playing; then playerctl metadata --format \"{\\\"text\\\":\\\"{{artist}} - {{markup_escape(title)}}\\\",\\\"tooltip\\\":\\\"{{playerName}} : {{markup_escape(title)}}\\\",\\\"alt\\\":\\\"{{status}}\\\",\\\"class\\\":\\\"{{status}}\\\"}\"; else printf \"{\\\"text\\\":\\\"No media\\\",\\\"class\\\":\\\"inactive\\\"}\\n\"; fi'"
     },
     "cava#left": {
       "autosens": 10,
@@ -294,6 +293,14 @@
         "", //
         "" //full
       ]
+    },
+    "custom/separatorl": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/separatorr": {
+      "format": "",
+      "tooltip": false
     }
   }
 ]

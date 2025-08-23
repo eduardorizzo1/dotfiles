@@ -5,18 +5,14 @@
   font-weight: 600;
   font-size: 16px;
   color: @fg;
-  margin: 0;
 }
 
 window#waybar {
-  background: @bg;
+  background: @bg_dark1;
 }
 
 window > box {
-  /* background: transparent; */
-  /* background: rgba(22, 22, 30, 0.85); */
-  background: @bg_dark;
-  margin: 0px 16px;
+  margin: 2px 4px;
   border-radius: 32px;
   padding: 4px;
 }
@@ -44,6 +40,26 @@ tooltip {
   padding: 0px 16px;
   border-radius: 32px;
   margin: 0 4px;
+}
+
+#custom-arch,
+#workspaces,
+#taskbar,
+#pulseaudio.input,
+#pulseaudio.output,
+#bluetooth,
+#network,
+#clock,
+#cpu,
+#battery,
+#memory,
+#temperature,
+#custom-playerlabel,
+#tray,
+#custom-powermenu,
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-playerctl.foward {
   background: @bg;
 }
 
@@ -95,8 +111,6 @@ tooltip {
 #custom-playerctl.backward,
 #custom-playerctl.play,
 #custom-playerctl.foward {
-  /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
   font-weight: bold;
   font-size: 28px;
 }
@@ -130,15 +144,12 @@ tooltip {
 
 #custom-playerlabel {
   color: @blue;
-  background: rgba(22, 22, 30, 0.8);
   border-radius: 0;
   margin: 0px;
 }
 
 #pulseaudio.output {
   color: @cyan;
-  /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
   border-radius: 0;
   margin: 0px;
   padding-left: 4px;
@@ -148,8 +159,6 @@ tooltip {
 
 #pulseaudio.input {
   color: @purple;
-  /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
   border-radius: 0 32px 32px 0;
   margin: 0px;
   padding-left: 4px;
@@ -174,8 +183,7 @@ tooltip {
 
 #cpu,
 #network,
-#battery
-{
+#battery {
   border-radius: 0 32px 32px 0;
   border-left: none;
   margin-left: 0px;
@@ -223,6 +231,49 @@ tooltip {
 
 #custom-left-separator,
 #custom-right-separator {
-  background: rgba(22, 22, 30, 0.8);
   font-size: 32px;
+}
+
+/* All sides */
+#custom-powermenu,
+#workspaces,
+#tray,
+#taskbar,
+#clock {
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.45),
+    inset 0 0 0 1px @line; 
+}
+
+/* Top - Bottom */
+#pulseaudio.output,
+#custom-playerctl.foward,
+#custom-arch,
+#cpu {
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.45),
+    inset 0  1px 0 0 @line,
+    inset 0 -1px 0 0 @line;
+}
+
+/* Top - Bottom - Left */
+#custom-playerctl.backward,
+#bluetooth,
+#memory {
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.45),
+    inset 0  1px 0 0 @line,
+    inset 0 -1px 0 0 @line,
+    inset 1px 0  0 0 @line;
+}
+
+/* Top - Bottom - Right */
+#pulseaudio.input,
+#network,
+#battery {
+ box-shadow:
+    0 8px 24px rgba(0,0,0,.45),
+    inset 0   1px 0 0 @line,
+    inset 0  -1px 0 0 @line,
+    inset -1px 0 0 0 @line;
 }
