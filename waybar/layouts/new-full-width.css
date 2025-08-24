@@ -12,10 +12,11 @@ window#waybar {
 }
 
 window > box {
-  margin: 4px 12px 0px 12px;
+  margin: 4px 10px 0px 10px;
   border-radius: 20px;
   padding: 4px;
   background: @bg_blur;
+  border: solid 2px @blue;
 }
 
 tooltip {
@@ -180,11 +181,11 @@ tooltip {
 }
 
 #clock {
-  color: @bg_dark1;
+  color: @bg;
   background: @blue;
   font-weight: bold;
   border-radius: 32px;
-  padding: 0 8px;
+  padding: 0 12px 0 8px;
 }
 
 #pulseaudio.output {
@@ -220,23 +221,50 @@ tooltip {
   border: solid 2px @blue;
 }
 
+#taskbar {
+  font-size: 48px;
+  font-family: 'Ubuntu';
+}
+
 #battery {
   padding: 0 8px;
+  margin: 0 8px;
 }
 
 #network {
-  padding: 0 8px 0 12px;
+  padding: 0 8px;
 }
 
 #bluetooth {
   padding: 0; 
+  margin: 0 2px;
 }
 
 #tray {
   padding: 0 12px;
 }
 
-#memory, #cpu {
+#memory,
+#cpu {
   font-weight: bold;
   font-size: 14px;
+}
+
+#taskbar {
+  margin: 0 12px;
+}
+
+#taskbar button.active,
+#taskbar button.urgent {
+  box-shadow: inset 0 0 0 16px @blue;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+#taskbar button.urgent { 
+  box-shadow: inset 0 0 0 16px @red;
+}
+
+#cava {
+  margin: 80px;
 }

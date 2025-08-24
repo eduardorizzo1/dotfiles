@@ -22,11 +22,11 @@
     "modules-right": [
       "memory",
       "cpu",
+      "network",
+      "bluetooth",
       "tray",
       "pulseaudio#output",
       "pulseaudio#input",
-      "network",
-      "bluetooth",
       "battery",
       "clock",
       "custom/powermenu"
@@ -129,10 +129,10 @@
       "interval": 1,
       "format-wifi": "󰖩 ",
       "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-      "format-ethernet": "󰈀",
+      "format-ethernet": "󰈀 ",
       "format-linked": "󰈀 {ifname} (No IP)",
       "format-disconnected": "󰖪 ",
-      "format-alt": "<span foreground='#c3e88d'> {bandwidthDownBytes}</span> <span foreground='#ffc777'> {bandwidthUpBytes}</span> ",
+      "format-alt": "<span size='smaller' foreground='#c3e88d'> {bandwidthDownBytes}</span> <span size='smaller' foreground='#ffc777'> {bandwidthUpBytes}</span> ",
       "tooltip": true
     },
     "pulseaudio#output": {
@@ -301,6 +301,10 @@
     "custom/separatorr": {
       "format": "",
       "tooltip": false
+    },
+    "custom/cava": {
+      "format": "{}",
+      "exec": "~/.config/waybar/scripts/cava.sh"
     }
   }
 ]

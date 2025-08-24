@@ -89,6 +89,9 @@ ttf-victor-mono
 ttf-cascadia-code
 ttf-hack-ligatured
 ttf-hack
+ttf-iosevka
+ttf-iosevka-nerd
+ttf-ubuntu-font-family
 noto-fonts
 noto-fonts-emoji
 
