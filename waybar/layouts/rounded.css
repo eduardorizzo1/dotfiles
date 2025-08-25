@@ -33,16 +33,16 @@ tooltip {
 #network,
 #clock,
 #cpu,
-#battery,
 #memory,
 #temperature,
 #custom-playerlabel,
 #tray,
+#battery,
 #custom-powermenu {
   padding: 0px 16px;
-  border-radius: 32px;
+  border-radius: 16px;
   margin: 0 4px;
-  background: @bg;
+  background: @bg_blur;
 }
 
 /***********************************************/
@@ -50,7 +50,6 @@ tooltip {
 /***********************************************/
 #custom-arch {
   color: @blue;
-
   padding-right: 20px;
   font-size: 20px;
 }
@@ -95,7 +94,7 @@ tooltip {
 #custom-playerctl.play,
 #custom-playerctl.foward {
   /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
+  background: @bg_blur;
   font-weight: bold;
   font-size: 28px;
 }
@@ -129,7 +128,7 @@ tooltip {
 
 #custom-playerlabel {
   color: @blue;
-  background: @bg;
+  background: @bg_blur;
   border-radius: 0;
   margin: 0px;
 }
@@ -137,7 +136,7 @@ tooltip {
 #pulseaudio.output {
   color: @cyan;
   /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
+  background: @bg_blur;
   border-radius: 0;
   margin: 0px;
   padding-left: 4px;
@@ -148,7 +147,7 @@ tooltip {
 #pulseaudio.input {
   color: @purple;
   /* background: rgba(22, 22, 30, 0.8); */
-  background: @bg;
+  background: @bg_blur;
   border-radius: 0 32px 32px 0;
   margin: 0px;
   padding-left: 4px;
@@ -163,8 +162,12 @@ tooltip {
   font-size: 18px;
 }
 
-#memory,
 #bluetooth {
+  margin-right: 0px;
+  border-radius: 0 32px 32px 0;
+}
+
+#memory {
   border-radius: 32px 0 0 32px;
   margin-right: 0px;
   padding-right: 8px;
@@ -172,11 +175,10 @@ tooltip {
 }
 
 #cpu,
-#network,
-#battery
-{
-  border-radius: 0 32px 32px 0;
+#network {
+  border-radius: 0;
   border-left: none;
+  border-right: none;
   margin-left: 0px;
   padding-left: 2px;
 }
@@ -184,7 +186,7 @@ tooltip {
 #cpu {
   color: @magenta;
   margin-right: 0;
-  padding-right: 8px;
+  padding: 0 4px;
   border-radius: 0;
 }
 
@@ -199,14 +201,15 @@ tooltip {
 
 #bluetooth {
   color: @blue;
-  padding-left: 20px;
-  padding-right: 2px;
+  padding: 0 16px;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 #network {
   color: @green;
-  margin: 0;
-  padding-right: 28px;
+  margin-right: 0px;
+  padding: 0 8px;
 }
 
 #clock {
@@ -222,7 +225,18 @@ tooltip {
 
 #custom-left-separator,
 #custom-right-separator {
-  background: @bg;
+  background: @bg_blur;
   font-size: 32px;
 }
 
+#tray {
+  border-radius: 32px 0 0 32px;
+  padding: 0 8px 0 16px;
+  margin-right: 0px;
+}
+
+#battery {
+  border-radius: 0 32px 32px 0;
+  padding: 0 16px 0 8px;
+  margin-left: 0px;
+}

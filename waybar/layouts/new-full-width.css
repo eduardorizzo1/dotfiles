@@ -12,11 +12,8 @@ window#waybar {
 }
 
 window > box {
-  margin: 4px 10px 0px 10px;
-  border-radius: 20px;
-  padding: 4px;
+  padding: 4px 8px;
   background: @bg_blur;
-  border: solid 2px @blue;
 }
 
 tooltip {
