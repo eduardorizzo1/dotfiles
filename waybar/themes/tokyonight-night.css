@@ -2,6 +2,7 @@
 @define-color bg_dark         #16161e;
 @define-color bg_dark1        #0C0E14;
 @define-color bg_highlight    #292e42;
+@define-color bg_highlight2   #25283c;
 
 @define-color fg              #c0caf5;
 @define-color fg_dark         #a9b1d6;
@@ -41,5 +42,5 @@
 @define-color git_change      #6183bb;
 @define-color git_delete      #914c54;
 
-@define-color bg_blur         rgba(12, 14, 20, 0.9);
+@define-color bg_blur         rgba(26, 27, 38, 0.9);
 @define-color line            rgba(192, 202, 245, 0.1);

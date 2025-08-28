@@ -100,7 +100,6 @@ tooltip {
 #custom-playerctl.foward,
 #custom-playerctl.backward,
 #custom-playerlabel {
-  padding: 0px 8px;
   border-right: none;
   border-left: none;
   font-weight: bold;
@@ -111,7 +110,7 @@ tooltip {
 #custom-playerctl.play,
 #custom-playerctl.foward {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 #custom-playerctl.backward:hover,
@@ -128,10 +127,7 @@ tooltip {
 
 #custom-playerctl.play {
   color: @blue;
-  border-right: none;
-  border-left: none;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0;
 }
 
 #custom-playerctl.foward {
@@ -145,23 +141,27 @@ tooltip {
   color: @blue;
   border-radius: 0;
   margin: 0px;
+  border-radius: 0 32px 32px 0;
+  padding: 0 16px 0 0;
 }
 
 #pulseaudio.output {
   color: @cyan;
   border-radius: 0;
-  margin: 0px;
+  margin: 0 0 0 4px;
   padding-left: 4px;
   border-right: none;
   border-left: none;
+  border: solid 1px @cyan;
 }
 
 #pulseaudio.input {
-  color: @purple;
+  color: @magenta;
   border-radius: 0 32px 32px 0;
   margin: 0px;
-  padding-left: 4px;
+  padding-left: 8px;
   border-left: none;
+  border: solid 1px @purple;
 }
 
 /***********************************************/
@@ -177,12 +177,11 @@ tooltip {
 #bluetooth {
   border-radius: 32px 0 0 32px;
   margin-right: 0px;
-  padding-right: 8px;
+  padding: 0 8px 0 16px;
   border-right: none;
 }
 
 #cpu,
-#network,
 #battery,
 #workspaces {
   border-radius: 0 32px 32px 0;
@@ -220,12 +219,14 @@ tooltip {
 }
 
 #clock {
-  color: @cyan;
+  background: @blue;
+  color: #000000;
   font-weight: bold;
 }
 
 #custom-powermenu {
   color: @red;
+  border: solid 2px @red;
   font-size: 18px;
   padding-right: 20px;
 }
@@ -244,4 +245,45 @@ tooltip {
 #workspaces {
   border: solid 2px @blue;
   border-radius: 32px;
+  margin-left: -16px;
+  background: @bg;
+  padding: 0 8px;
 }
+
+#tray, #network{
+  border-radius: 0; 
+  margin: 0;
+}
+
+#tray {
+  margin: 0 0 0 4px;
+}
+
+#bluetooth {
+  border-radius: 0 32px 32px 0;
+  margin-left: 0;
+  padding: 0 16px 0 4px;
+}
+
+#network {
+  padding: 0 2px;
+}
+
+#pulseaudio.output,
+#tray {
+  border-radius: 32px 0 0 32px;
+  padding: 0 8px 0 16px;
+}
+
+#taskbar {
+  border: solid 2px @bg_dark1;
+}
+
+/* Left Rounded */
+/* border-radius: 32px 0 0 32px; */
+
+/* Right Rounded */
+/* border-radius: 0 32px 32px 0; */
+
+/* Full Rounded */
+/* border-radius: 32px; */
