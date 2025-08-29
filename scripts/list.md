@@ -37,12 +37,9 @@ ark
 p7zip
 unrar
 
-hyprpaper
-hyprgrass
 hyprpicker
 hypridle
 hyprlock
-hyprspace
 wlogout
 swaylock-effects
 
@@ -53,6 +50,7 @@ swappy
 wl-clipboard
 slurp
 grimblast-git
+libinput-gestures
 
 wtype
 gwenview
