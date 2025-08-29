@@ -11,24 +11,24 @@
     "modules-left": [
       "custom/arch",
       "hyprland/workspaces#pacman",
-      "wlr/taskbar"
-    ],
-    "modules-center": [
       "custom/playerctl#backward",
       "custom/playerctl#play",
       "custom/playerctl#foward",
-      "custom/playerlabel"
+      "custom/playerlabel",
+      "wlr/taskbar"
+    ],
+    "modules-center": [
+      "clock"
     ],
     "modules-right": [
-      "memory",
-      "cpu",
-      "network",
+      "tray",
       "bluetooth",
+      "network",
+      "cpu",
+      "memory",
       "pulseaudio#output",
       "pulseaudio#input",
-      "tray",
       "battery",
-      "clock",
       "custom/powermenu"
     ],
     //===============================================
@@ -72,8 +72,8 @@
     },
     // ========================
     "clock": {
-      "format": "󰅐 {:%R}",
-      "format-alt": "󰃭 {:%b %d │ 󰅐 %R}",
+      "format-alt": "󰅐  {:%R}",
+      "format": "󰃭  {:%b %d │ 󰅐  %R}",
       "tooltip-format": "<tt>{calendar}</tt>",
       "rotate": 0,
       "calendar": {
