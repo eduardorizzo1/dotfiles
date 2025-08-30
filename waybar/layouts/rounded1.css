@@ -1,0 +1,190 @@
+@import "../themes/tokyonight-night.css";
+
+* {
+  font-family: "Symbols Nerd Font";
+  font-weight: 600;
+  font-size: 16px;
+  color: @fg;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window > box {
+  margin: 2px 4px;
+  border-radius: 16px;
+  padding: 2px 4px;
+  /* background: rgba(26, 27, 38, 0.4); */
+}
+
+tooltip {
+  border: solid 0.8px @blue;
+  border-radius: 16px;
+}
+
+#custom-arch,
+#workspaces,
+#taskbar,
+#pulseaudio.input,
+#pulseaudio.output,
+#bluetooth,
+#network,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#custom-playerlabel,
+#tray,
+#battery,
+#custom-playerctl.backward,
+#custom-playerctl.play,
+#custom-updates,
+#custom-playerctl.foward,
+#custom-powermenu {
+  background: @bg_blur;
+  border: solid 2px @bg_highlight2;
+  margin: 2px 4px;
+  padding: 2px 16px;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 2px rgba(0,0,0,0.2),
+    inset 0 -1px 0 0 @blue;
+}
+
+
+#custom-arch{
+  color: @blue;
+}
+
+#workspaces{
+  color: @blue;
+}
+
+#taskbar{
+  color: @blue;
+}
+
+#pulseaudio.input{
+  color: @magenta;
+  border-radius: 0 16px 16px 0;
+  border-left: none;
+  margin-left: 0;
+  padding: 2px 16px 0 8px;
+}
+
+#pulseaudio.output{
+  color: @cyan;
+  border-radius: 0;
+  border-right: none;
+  border-radius: 16px 0 0 16px;
+  margin-right: 0;
+  padding: 2px 8px 0 16px;
+}
+
+#bluetooth{
+  color: @blue;
+}
+
+#network{
+  color: @green;
+}
+
+#clock{
+  color: @cyan;
+}
+
+#cpu{
+  color: @green;
+  border-radius: 0; 
+  border-right: none;
+  border-radius: 16px 0 0 16px;
+  margin-right: 0;
+  padding: 2px 8px 0 16px;
+}
+
+#memory{
+  color: @orange;
+  border-radius: 0 16px 16px 0;
+  border-left: none;
+  margin-left: 0;
+  padding: 2px 16px 0 8px;
+}
+
+#temperature{
+  color: @blue;
+}
+
+#custom-playerlabel{
+  color: @blue;
+  border-radius: 0 16px 16px 0;
+  border-left: none;
+  margin-left: 0;
+  padding: 2px 16px 0 8px;
+}
+
+#tray{
+  color: @blue;
+}
+
+#battery{
+  color: @fg;
+}
+
+#custom-playerctl.backward{
+  color: @blue;
+}
+
+#custom-playerctl.play{
+  color: @purple;
+  font-size: 24;
+  border-radius: 0;
+  border-right: none;
+  border-radius: 16px 0 0 16px;
+  margin-right: 0;
+  padding: 2px 8px 0 16px;
+}
+
+#custom-updates{
+  color: @blue;
+}
+
+#custom-playerctl.foward{
+color: @blue;  
+} 
+
+#custom-powermenu {
+  color: @red;  
+} 
+
+#workspaces {
+  font-weight: bold;
+}
+
+#workspaces button.empty label {
+  color: @comment;
+}
+
+#workspaces button.active {
+  transition: all 1s ease-in-out;
+}
+
+#workspaces button.active label {
+  color: @yellow;
+  font-size: 22px;
+}
+
+#workspaces button label {
+  color: @blue;
+  font-size: 20px;
+}
+
+/* Left Rounded */
+/* border-radius: 32px 0 0 32px; */
+
+/* Right Rounded */
+/* border-radius: 0 32px 32px 0; */
+
+/* Full Rounded */
+/* border-radius: 32px; */
+

@@ -36,6 +36,7 @@ tooltip {
 #temperature,
 #custom-playerlabel,
 #tray,
+#custom-updates,
 #custom-powermenu {
   padding: 0px 16px;
   border-radius: 32px;
@@ -58,6 +59,7 @@ tooltip {
 #custom-powermenu,
 #custom-playerctl.backward,
 #custom-playerctl.play,
+#custom-updates,
 #custom-playerctl.foward {
   background: @bg_blur;
 }
@@ -104,6 +106,12 @@ tooltip {
   font-family: "Hack Nerd Font";
 }
 
+#custom-playerctl.play,
+#custom-playerctl.foward,
+#custom-playerlabel {
+  border: solid 2px @blue; 
+}
+
 #custom-playerctl.backward,
 #custom-playerctl.play,
 #custom-playerctl.foward {
@@ -122,11 +130,15 @@ tooltip {
   border-right: none;
   padding-left: 16px;
   margin: 0 0 0 8px;
+  border: solid 2px @magenta; 
+  border-right: none;
 }
 
 #custom-playerctl.play {
-  color: @blue;
-  padding: 0;
+  color: @magenta;
+  padding: 0 12px;
+  margin: 0 0 0 8px;
+  border-radius: 32px 0 0 32px;
 }
 
 #custom-playerctl.foward {
@@ -141,33 +153,35 @@ tooltip {
   border-radius: 0;
   margin: 0px;
   border-radius: 0 32px 32px 0;
-  padding: 0 16px 0 0;
+  padding: 0 16px 0 8px;
 }
 
 #custom-playerctl.play,
-#custom-playerctl.foward,
+#custom-playerctl.foward {
+  border-right: none;
+}
+
+
 #custom-playerlabel {
   border-left: none;
-  border-right: none;
 }
 
 #pulseaudio.output {
   color: @cyan;
   border-radius: 0;
-  margin: 0 0 0 4px;
-  padding-left: 4px;
-  border-right: none;
-  border-left: none;
-  border: solid 1px @cyan;
+  margin: 0 0 0 8px;
+  padding: 0 2px 0 4px;
+  border: solid 2px @cyan;
+  border-right: solid 1px @cyan;
 }
 
 #pulseaudio.input {
   color: @magenta;
   border-radius: 0 32px 32px 0;
-  margin: 0px;
-  padding-left: 8px;
-  border-left: none;
-  border: solid 1px @purple;
+  margin: 0 8px 0 0;
+  padding-left: 12px;
+  border: solid 2px @cyan;
+  border-left: solid 0px @magenta;
 }
 
 /***********************************************/
@@ -182,7 +196,7 @@ tooltip {
 #custom-arch,
 #bluetooth {
   border-radius: 32px 0 0 32px;
-  margin: 0 0 0 8px;
+  margin: 0 4px 0 0;
   padding: 0 8px 0 16px;
   border-right: none;
 }
@@ -197,29 +211,55 @@ tooltip {
 
 #cpu {
   color: @magenta;
+  border: solid 2px @blue;
   margin-right: 0;
   padding-right: 8px;
   border-radius: 0;
+  border-left: none;
+  border-right: none;
 }
 
 #memory {
   color: @orange;
+  border: solid 2px @blue;
+  border-radius: 0;
   border-left: none;
-  border-radius: 0 32px 32px 0;
-  padding: 0 16px 0 0;
+  border-right: none;
+  padding: 0 8px 0 0;
   margin: 0;
 }
 
 #battery {
   color: @fg;
-  border: solid 2px @fg;
+  border: solid 2px @blue;
+  margin: 0 4px 0 0;
+  border-radius: 0 32px 32px 0;
+  border-left: none;
+  padding: 0 12px 0 4px;
 }
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#battery.critical { 
+  animation: batt-blink 1s ease-in-out infinite; 
+}
+
+@keyframes batt-blink { 50% { opacity: .45; } }
 
 #network {
   color: @green;
-  margin: 0;
-  padding: 0 4px;
+  border: solid 2px @blue;
   border-radius: 0; 
+  border-left: none;
+  border-right: none;
+  padding: 0 2px;
+  margin-right: 0;
 }
 
 #clock {
@@ -233,6 +273,7 @@ tooltip {
   border: solid 2px @red;
   font-size: 18px;
   padding-right: 16px;
+  margin: 0 0 0 4px;
 }
 
 #custom-left-separator,
@@ -256,33 +297,31 @@ tooltip {
 }
 
 #tray {
-  margin: 0 8px;
+  margin: 0 0 0 4px;
   border: solid 2px @fg;
+  border-radius: 32px;
+  padding: 0 16px;
 }
 
 #bluetooth {
   color: @blue;
-  margin-left: 0;
+  border: solid 2px @blue;
+  border-radius: 32px 0 0 32px;
+  border-right: none;
   margin: 0;
   padding: 0 4px 0 16px;
-  border-radius: 32px 0 0 32px;
 }
 
-#pulseaudio.output,
-#tray {
+#pulseaudio.output {
   border-radius: 32px 0 0 32px;
   padding: 0 16px;
 }
 
-#tray {
-  border-radius: 32px;
-}
-
 #taskbar {
-  margin: 0 8px;
-  border: solid 2px @blue;
-  padding: 0;
+  border: solid 2px @magenta;
   border-radius: 32px;
+  margin: 0 8px;
+  padding: 0;
 }
 
 #taskbar button.active,
@@ -295,6 +334,17 @@ tooltip {
 #taskbar button.urgent { 
   box-shadow: inset 0 0 0 16px @red;
 }
+
+#custom-updates {
+  color: @cyan;
+  border: solid 2px @blue;
+  border-radius: 0; 
+  border-left: none;
+  border-right: none;
+  padding: 0 8px 0 4px;
+  margin-right: 0;
+}
+
 
 /* Left Rounded */
 /* border-radius: 32px 0 0 32px; */
