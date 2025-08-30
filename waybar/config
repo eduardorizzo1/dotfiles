@@ -15,9 +15,7 @@
       "custom/playerlabel",
       "wlr/taskbar"
     ],
-    "modules-center": [
-      "clock"
-    ],
+    "modules-center": [],
     "modules-right": [
       "tray",
       "pulseaudio#output",
@@ -25,6 +23,8 @@
       "custom/updates",
       "cpu",
       "memory",
+      "custom/weather",
+      "clock",
       "battery",
       "custom/powermenu"
     ],
@@ -330,6 +330,15 @@
       "format": " {free}",
       "format-alt": " {used}/{total} ({percentage_used}%)",
       "tooltip": true
+    },
+    "custom/weather": {
+      "format": "{text}",
+      "return-type": "json",
+      "interval": 900,
+      "signal": 10,
+      "exec": "~/.config/waybar/scripts/weather.sh",
+      "tooltip": true,
+      "on-click": "bash -lc 'f=${XDG_CACHE_HOME:-$HOME/.cache}/waybar_weather_show_city; [[ -f $f ]] && rm -f $f || : > $f; pkill -RTMIN+10 waybar'"
     }
   }
 ]

@@ -41,6 +41,7 @@ tooltip {
 #custom-playerctl.play,
 #custom-updates,
 #custom-playerctl.foward,
+#custom-weather,
 #custom-powermenu {
   background: @bg_blur;
   border: solid 2px @bg_highlight2;
@@ -104,7 +105,7 @@ tooltip {
 }
 
 #memory{
-  color: @orange;
+  color: @red;
   border-radius: 0 16px 16px 0;
   border-left: none;
   margin-left: 0;
@@ -177,6 +178,10 @@ color: @blue;
 #workspaces button label {
   color: @blue;
   font-size: 20px;
+}
+
+#custom-weather {
+  color: @yellow;
 }
 
 /* Left Rounded */
