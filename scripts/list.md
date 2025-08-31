@@ -17,6 +17,7 @@ bluez-utils
 udiskie
 polkit-kde-agent
 jq
+keyd (sudo systemctl enable keyd)
 
 dolphin
 kvantum
