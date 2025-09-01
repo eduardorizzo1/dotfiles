@@ -1,5 +1,7 @@
+@import "~/.config/waybar/themes/tokyonight-night.css";
+
 * {
-  transition: 0.1s;
+  transition: 1s;
 }
 
 window {
@@ -9,7 +11,7 @@ window {
 
 window {
   margin: 0px;
-  border: 2px solid #82aaff;
+  border: 2px solid #72aaff;
   background-color: rgba(22, 25, 37, 0.9);
   border-radius: 16px;
 }
@@ -19,7 +21,7 @@ window {
   margin: 20px;
   padding-left: 20px;
   border: none;
-  color: @fg;
+  color: #c8d3f5;
   background: #222436;
   outline: none;
   border-radius: 16px;
