@@ -26,11 +26,14 @@ kvantum-qt6-git
 tokyonight-gtk-theme-git
 tela-circle-icon-theme-all
 bibata-cursor-git
-ffmpegthumbs
 kde-cli-tools
 kservice5
 imagemagick
 qt5-imageformats
+ffmpeg
+ffmpegthumbs
+mpv
+gwenview
 
 # cp dolphinrc and kdeglobals > .config/
 
@@ -52,9 +55,6 @@ wl-clipboard
 slurp
 grimblast-git
 libinput-gestures
-
-wtype
-gwenview
 
 pipewire-pulse
 pipewire-audio
