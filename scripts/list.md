@@ -16,6 +16,7 @@ bluez
 bluez-utils
 udiskie
 polkit-kde-agent
+libreoffice-fresh
 jq
 keyd (sudo systemctl enable keyd)
 
