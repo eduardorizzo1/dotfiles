@@ -126,10 +126,19 @@ tooltip {
 
 #tray{
   color: @blue;
+  border-radius: 0;
+  border-right: none;
+  border-radius: 16px 0 0 16px;
+  margin-right: 0;
+  padding: 2px 8px 0 16px;
 }
 
 #battery{
   color: @fg;
+  border-radius: 0 16px 16px 0;
+  border-left: none;
+  margin-left: 0;
+  padding: 2px 16px 0 8px;
 }
 
 #custom-playerctl.backward{

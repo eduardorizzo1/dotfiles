@@ -17,15 +17,15 @@
     ],
     "modules-center": [],
     "modules-right": [
-      "tray",
-      "pulseaudio#output",
-      "pulseaudio#input",
       "custom/updates",
       "cpu",
       "memory",
       "custom/weather",
-      "clock",
+      "pulseaudio#output",
+      "pulseaudio#input",
+      "tray",
       "battery",
+      "clock",
       "custom/powermenu"
     ],
     //===============================================
@@ -140,6 +140,8 @@
       "smooth-scrolling-threshold": 1,
       "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
       "on-click-right": "pavucontrol -t 3",
+      "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ -2%",
+      "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ +2%",
       "format-icons": {
         "default": [
           " ",
@@ -158,8 +160,8 @@
       "max-volume": 100,
       "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
       "on-click-right": "pavucontrol -t 4",
-      "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-      "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+      "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ -2%",
+      "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ +2%"
     },
     "bluetooth": {
       "format": "<span color='#82aaff'> </span>",
