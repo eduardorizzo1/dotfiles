@@ -19,6 +19,7 @@ polkit-kde-agent
 libreoffice-fresh
 jq
 keyd (sudo systemctl enable keyd)
+rofi-wayland
 
 dolphin
 kvantum
