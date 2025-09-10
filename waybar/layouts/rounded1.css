@@ -191,6 +191,7 @@ color: @blue;
 
 #custom-weather {
   color: @yellow;
+  padding-top: 8px;
 }
 
 /* Left Rounded */
