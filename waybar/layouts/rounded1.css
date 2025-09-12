@@ -171,6 +171,11 @@ color: @blue;
   font-weight: bold;
 }
 
+#workspaces button label {
+  color: @blue;
+  font-size: 20px;
+}
+
 #workspaces button.empty label {
   color: @comment;
 }
@@ -184,14 +189,14 @@ color: @blue;
   font-size: 22px;
 }
 
-#workspaces button label {
-  color: @blue;
-  font-size: 20px;
+#workspaces button.special label {
+  color: @teal;
+  font-size: 22px;
 }
 
 #custom-weather {
   color: @yellow;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 /* Left Rounded */
