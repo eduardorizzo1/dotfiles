@@ -12,6 +12,7 @@
     "modules-left": [
       "custom/arch",
       "hyprland/workspaces#pacman",
+      "custom/wsnum",
       "custom/playerctl#play",
       "custom/playerlabel",
       "wlr/taskbar"
@@ -342,6 +343,13 @@
       "exec": "~/.config/waybar/scripts/weather.sh",
       "tooltip": true,
       "on-click": "bash -lc 'f=${XDG_CACHE_HOME:-$HOME/.cache}/waybar_weather_show_city; [[ -f $f ]] && rm -f $f || : > $f; pkill -RTMIN+10 waybar'"
+    },
+    "custom/wsnum": {
+      "format": "{}",
+      "exec": "hyprctl -j activeworkspace | jq -r '.id'",
+      // "exec": "bash -lc 'id=$(hyprctl -j activeworkspace | jq -r .id); circ=(⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳); (( id>=0 && id<=20 )) && echo ${circ[$id]} || echo $id'",
+      "interval": 1,
+      "tooltip": false
     }
   }
 ]

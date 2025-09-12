@@ -42,6 +42,7 @@ tooltip {
 #custom-updates,
 #custom-playerctl.foward,
 #custom-weather,
+#custom-wsnum,
 #custom-powermenu {
   background: @bg_blur;
   border: solid 2px @bg_highlight2;
@@ -194,10 +195,35 @@ color: @blue;
   font-size: 22px;
 }
 
+#workspaces button.special.active label {
+  color: @teal;
+  font-size: 22px;
+}
+
 #custom-weather {
   color: @yellow;
   padding-top: 4px;
 }
+
+#workspaces {
+  border-radius: 0;
+  border-right: none;
+  border-radius: 16px 0 0 16px;
+  margin-right: 0;
+  padding-right: 2px;
+}
+
+#custom-wsnum {
+  color: @red;
+  font-family: "Cascadia Code";
+  font-weight: bold;
+  font-size: 18;
+  border-radius: 0 16px 16px 0;
+  border-left: none;
+  margin-left: 0;
+  padding: 0 16px 0px 2px;
+}
+
 
 /* Left Rounded */
 /* border-radius: 32px 0 0 32px; */
