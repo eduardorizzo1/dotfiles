@@ -29,6 +29,7 @@ tokyonight-gtk-theme-git
 tela-circle-icon-theme-all
 bibata-cursor-git
 kde-cli-tools
+archlinux-xdg-menu #for dolphin open with...
 kservice5
 imagemagick
 qt5-imageformats
