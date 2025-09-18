@@ -7,6 +7,7 @@ yay -S xdg-desktop-portal \
   nwg-displays \
   nwg-look-bin \
   rofi-wayland \
+  waybar-git \
   networkmanager \
   network-manager-applet \
   blueman \
