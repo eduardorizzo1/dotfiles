@@ -14,12 +14,11 @@ sudo pacman -S --needed --noconfirm git base-devel curl wget zsh unzip vim
 # Yay
 if ! command -v yay >/dev/null 2>&1; then
   echo "Installing yay..."
-  tmpdir="$(mktemp -d)"
-  git clone --depth=1 https://aur.archlinux.org/yay.git "$tmpdir/yay"
-  pushd "$tmpdir/yay" >/dev/null
+  git clone --depth=1 https://aur.archlinux.org/yay.git "$HOME"
+  cd "$HOME"/yay
   makepkg -si --noconfirm
-  popd >/dev/null
-  rm -rf "$tmpdir"
+  cd "$HOME"
+  rm -rf "$HOME/yay"
 fi
 
 # Oh-my-zsh
