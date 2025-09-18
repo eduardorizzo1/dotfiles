@@ -4,7 +4,8 @@ yay -S xdg-desktop-portal \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk \
   xdg-user-dirs \
-  nwg-displaysnwg-look-bin \
+  nwg-displays \
+  nwg-look-bin \
   rofi-wayland \
   networkmanager \
   network-manager-applet \
