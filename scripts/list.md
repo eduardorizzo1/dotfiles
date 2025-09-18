@@ -71,17 +71,6 @@ wireplumber
 brightnessctl
 pamixer
 
-yazi
-eza
-tmux
-google-chrome
-firefox
-neovim-nightly-bin
-vim
-ripgrep
-lua
-code
-
 ttf-hack-nerd
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
@@ -103,3 +92,14 @@ sddm-sugar-candy-git
 qt5-quickcontrols2
 qt5-graphicaleffects
 qt5-svg
+
+neovim-nightly-bin
+vim
+ripgrep
+lua
+code
+eza
+tmux
+lazygit
+google-chrome
+firefox
