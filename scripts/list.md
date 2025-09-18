@@ -55,6 +55,7 @@ qt6-wayland
 cliphist
 swappy
 wl-clipboard
+wf-recorder
 slurp
 grimblast-git
 libinput-gestures
