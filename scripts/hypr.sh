@@ -22,6 +22,7 @@ yay -S xdg-desktop-portal \
   kvantum-qt5 \
   kvantum-qt6-git \
   tokyonight-gtk-theme-git \
+  catppuccin-gtk-theme-mocha \
   tela-circle-icon-theme-all \
   bibata-cursor-git \
   kde-cli-tools \
@@ -64,4 +65,5 @@ yay -S xdg-desktop-portal \
   sddm-sugar-candy-git \
   qt5-quickcontrols2 \
   qt5-graphicaleffects \
-  qt5-svg
+  qt5-svg \
+  pacman-contrib
