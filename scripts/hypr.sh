@@ -67,3 +67,6 @@ yay -S xdg-desktop-portal \
   qt5-graphicaleffects \
   qt5-svg \
   pacman-contrib
+
+# sudo systemctl enable keyd.service
+# sudo systemctl start keyd.service
