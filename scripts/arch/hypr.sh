@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-yay -S xdg-desktop-portal \
+yay -S \
+  xdg-desktop-portal \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk \
   xdg-user-dirs \
@@ -10,9 +11,6 @@ yay -S xdg-desktop-portal \
   waybar-git \
   networkmanager \
   network-manager-applet \
-  blueman \
-  bluez \
-  bluez-utils \
   udiskie \
   polkit-kde-agent \
   libreoffice-fresh \
@@ -53,15 +51,6 @@ yay -S xdg-desktop-portal \
   slurp \
   grimblast-git \
   libinput-gestures \
-  pipewire-pulse \
-  pipewire-audio \
-  pipewire-jack \
-  pipewire-alsa \
-  wctl \
-  pavucontrol \
-  wireplumber \
-  brightnessctl \
-  pamixer \
   sddm \
   sddm-sugar-candy-git \
   qt5-quickcontrols2 \
