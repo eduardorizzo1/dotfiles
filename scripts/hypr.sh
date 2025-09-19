@@ -5,7 +5,7 @@ yay -S xdg-desktop-portal \
   xdg-desktop-portal-gtk \
   xdg-user-dirs \
   nwg-displays \
-  nwg-look-bin \
+  nwg-look \
   rofi-wayland \
   waybar-git \
   networkmanager \
@@ -41,6 +41,7 @@ yay -S xdg-desktop-portal \
   hyprlock \
   wlogout \
   swaylock-effects \
+  swaync \
   qt5-wayland \
   qt6-wayland \
   cliphist \

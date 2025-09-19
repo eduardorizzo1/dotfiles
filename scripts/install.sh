@@ -12,22 +12,22 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --needed --noconfirm git base-devel curl wget zsh unzip vim
 
 # Yay
-if ! command -v yay >/dev/null 2>&1; then
-  echo "Installing yay..."
-  git clone --depth=1 https://aur.archlinux.org/yay.git ./"$HOME"
-  cd "$HOME"/yay
-  makepkg -si --noconfirm
-  cd "$HOME"
-  rm -rf ./"$HOME"/yay
-fi
+#if ! command -v yay >/dev/null 2>&1; then
+#  echo "Installing yay..."
+#  git clone --depth=1 https://aur.archlinux.org/yay.git ./"$HOME"
+#  cd "$HOME"/yay
+#  makepkg -si --noconfirm
+#  cd "$HOME"
+#  rm -rf ./"$HOME"/yay
+#fi
 
 # Oh-my-zsh
 echo "Oh my zsh..."
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # p10k
-echo "P10K..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+echo "p10k..."
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 # Neovim
 echo "Neovim..."
@@ -36,3 +36,4 @@ git clone http://github.com/eduardorizzo1/nvim-lua nvim && mv nvim ./"$HOME"/.co
 
 cp dotfiles/.zshrc ./"$HOME"/
 cp dotfiles/.p10k.zsh ./"$HOME"/
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
