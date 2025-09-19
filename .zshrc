@@ -70,7 +70,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
 #=====[ Alias ]=====
-alias yz='yazi'
 alias g lg='lazygit'
 alias ls='eza --icons --group-directories-first --color=auto'
 alias l='ls -1 -a'
@@ -78,3 +77,5 @@ alias ll='ls -al'
 alias la='ls -a'
 alias lt='ls --tree'
 alias ld='ls --only-dirs'
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
