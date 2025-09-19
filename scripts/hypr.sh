@@ -63,7 +63,7 @@ yay -S xdg-desktop-portal \
   brightnessctl \
   pamixer \
   sddm \
-  sddm-sugar-candy-git \
+  sddm-astronaut-theme \
   qt5-quickcontrols2 \
   qt5-graphicaleffects \
   qt5-svg \
