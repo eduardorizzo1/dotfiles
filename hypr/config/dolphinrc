@@ -1,0 +1,31 @@
+[CompactMode]
+UseSystemFont=false
+ViewFont=Ubuntu,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[DetailsMode]
+UseSystemFont=false
+ViewFont=Ubuntu,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[General]
+GlobalViewProps=false
+RememberOpenedTabs=false
+ShowStatusBar=true
+TerminalApplication=kitty
+Version=202
+ViewPropsTimestamp=2024,10,29,10,5,37.231
+
+[IconsMode]
+PreviewSize=80
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=audiothumbnail,directorythumbnail,imagethumbnail,comicbookthumbnail,cursorthumbnail,svgthumbnail,appimagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,kraorathumbnail,ebookthumbnail,opendocumentthumbnail,windowsexethumbnail,djvuthumbnail,gdk-pixbuf-thumbnailer,jxl
+
+[UiSettings]
+ColorScheme=Breeze-Dark
