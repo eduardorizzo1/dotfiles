@@ -6,8 +6,9 @@
     "exclusive": true,
     "spacing": 0,
     "output": [
-      "eDP-1"
-      // "DP-3"
+      "eDP-1",
+      "HDMI-A-2",
+      "DP-3"
     ],
     "modules-left": [
       "custom/arch",
@@ -324,7 +325,7 @@
     "disk#root": {
       "path": "/",
       "interval": 30,
-      "format": " {free}", // espaço livre
+      "format": " {free}",
       "format-alt": " {used}/{total} ({percentage_used}%)",
       "tooltip": true
     },
@@ -348,7 +349,7 @@
       "format": "{}",
       "exec": "hyprctl -j activeworkspace | jq -r '.id'",
       // "exec": "bash -lc 'id=$(hyprctl -j activeworkspace | jq -r .id); circ=(⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳); (( id>=0 && id<=20 )) && echo ${circ[$id]} || echo $id'",
-      "interval": 1,
+      "interval": 0.5,
       "tooltip": false
     }
   }

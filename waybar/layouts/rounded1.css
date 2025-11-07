@@ -50,24 +50,23 @@ tooltip {
   padding: 2px 16px;
   border-radius: 16px;
   box-shadow:
-    0 2px 2px rgba(0,0,0,0.2),
+    0 8px 8px rgba(0, 0, 0, 0.2),
     inset 0 -1px 0 0 @blue;
 }
 
-
-#custom-arch{
+#custom-arch {
   color: @blue;
 }
 
-#workspaces{
+#workspaces {
   color: @blue;
 }
 
-#taskbar{
+#taskbar {
   color: @blue;
 }
 
-#pulseaudio.input{
+#pulseaudio.input {
   color: @magenta;
   border-radius: 0 16px 16px 0;
   border-left: none;
@@ -75,7 +74,7 @@ tooltip {
   padding: 2px 16px 0 8px;
 }
 
-#pulseaudio.output{
+#pulseaudio.output {
   color: @cyan;
   border-radius: 0;
   border-right: none;
@@ -84,28 +83,28 @@ tooltip {
   padding: 2px 8px 0 16px;
 }
 
-#bluetooth{
+#bluetooth {
   color: @blue;
 }
 
-#network{
+#network {
   color: @green;
 }
 
-#clock{
+#clock {
   color: @cyan;
 }
 
-#cpu{
+#cpu {
   color: @green;
-  border-radius: 0; 
+  border-radius: 0;
   border-right: none;
   border-radius: 16px 0 0 16px;
   margin-right: 0;
   padding: 2px 8px 0 16px;
 }
 
-#memory{
+#memory {
   color: @red;
   border-radius: 0 16px 16px 0;
   border-left: none;
@@ -113,11 +112,11 @@ tooltip {
   padding: 2px 16px 0 8px;
 }
 
-#temperature{
+#temperature {
   color: @blue;
 }
 
-#custom-playerlabel{
+#custom-playerlabel {
   color: @blue;
   border-radius: 0 16px 16px 0;
   border-left: none;
@@ -125,7 +124,7 @@ tooltip {
   padding: 2px 16px 0 8px;
 }
 
-#tray{
+#tray {
   color: @blue;
   border-radius: 0;
   border-right: none;
@@ -134,7 +133,7 @@ tooltip {
   padding: 2px 8px 0 16px;
 }
 
-#battery{
+#battery {
   color: @fg;
   border-radius: 0 16px 16px 0;
   border-left: none;
@@ -142,11 +141,11 @@ tooltip {
   padding: 2px 16px 0 8px;
 }
 
-#custom-playerctl.backward{
+#custom-playerctl.backward {
   color: @blue;
 }
 
-#custom-playerctl.play{
+#custom-playerctl.play {
   color: @purple;
   font-size: 24;
   border-radius: 0;
@@ -156,17 +155,17 @@ tooltip {
   padding: 2px 8px 0 16px;
 }
 
-#custom-updates{
+#custom-updates {
   color: @blue;
 }
 
-#custom-playerctl.foward{
-color: @blue;  
-} 
+#custom-playerctl.foward {
+  color: @blue;
+}
 
 #custom-powermenu {
-  color: @red;  
-} 
+  color: @red;
+}
 
 #workspaces {
   font-weight: bold;
@@ -224,7 +223,6 @@ color: @blue;
   padding: 0 16px 0px 2px;
 }
 
-
 /* Left Rounded */
 /* border-radius: 32px 0 0 32px; */
 
@@ -233,4 +231,3 @@ color: @blue;
 
 /* Full Rounded */
 /* border-radius: 32px; */
-
