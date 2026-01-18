@@ -1,0 +1,94 @@
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEMS_DIR="$CONFIG_DIR/items"
+
+ICON_FONT="Hack Nerd Font:Regular:14.0"
+LABEL_FONT="Cascadia Code:Regular:14.0"
+
+###################################################
+####################[ Bar ]########################
+###################################################
+
+sketchybar --bar      position=top                \
+                      height=32                   \
+                      color=0x00000000            \
+                      blur_radius=30              \
+                      y_offset=4                  \
+                      corner_radius=12            \
+                                                  \
+           --default  padding_left=0              \
+                      padding_right=0             \
+                      icon.font="$ICON_FONT"      \
+                      icon.padding_left=4         \
+                      icon.padding_right=4        \
+                      icon.color=0xffffffff       \
+                      label.font="$LABEL_FONT"    \
+                      label.color=0xffffffff      \
+                      label.padding_left=0        \
+                      label.padding_right=0       \
+
+###################################################
+####################[ Left ]#######################
+###################################################
+
+#_______ Workspaces _______
+"$PLUGIN_DIR/workspaces.sh"
+
+
+###################################################
+####################[ Right ]######################
+###################################################
+
+#________ Clock _______
+sketchybar  --add     item clock right            \
+            --set     clock update_freq=5         \
+                      background.color=0xff1a1b2c \
+                      background.corner_radius=16 \
+                      label.padding_right=12      \
+                      label.padding_left=8        \
+                      label.color=0xff7dcfff       \
+                                                  \
+            script="$PLUGIN_DIR/clock.sh"         \
+
+"$ITEMS_DIR/wifi.sh"
+
+
+#!/usr/bin/env sh
+
+# CPU
+sketchybar --add item cpu right \
+  --set cpu \
+    icon= \
+    label="--%" \
+    icon.font="Hack Nerd Font:Regular:14.0" \
+    label.font="Cascadia Code:Regular:14.0" \
+    icon.padding_left=8 \
+    icon.padding_right=6 \
+    icon.color=0xffff9e64 \
+    label.padding_right=10 \
+    label.color=0xffff9e64 \
+    background.drawing=on \
+    background.height=26 \
+    background.corner_radius=13 \
+    background.color=0xff1a1b2c \
+    script="$PLUGIN_DIR/cpu.sh" \
+    update_freq=2
+
+# RAM
+sketchybar --add item ram right \
+  --set ram \
+    icon=󰍛 \
+    label="--%" \
+    icon.font="Hack Nerd Font:Regular:14.0" \
+    label.font="Cascadia Code:Regular:14.0" \
+    icon.padding_left=8 \
+    icon.padding_right=6 \
+    icon.color=0xffbb9af7 \
+    label.padding_right=10 \
+    label.color=0xffbb9af7 \
+    background.drawing=on \
+    background.height=26 \
+    background.corner_radius=13 \
+    background.color=0xff1a1b2c \
+    script="$PLUGIN_DIR/ram.sh" \
+    update_freq=2
+
