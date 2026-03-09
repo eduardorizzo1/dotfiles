@@ -1,12 +1,25 @@
 gui:
   theme:
     activeBorderColor:
-      - yellow
+      - "#ff9e64"
       - bold
     inactiveBorderColor:
-      - blue
+      - "#565f89"
     selectedLineBgColor:
       - "#2f334d"
+    searchingActiveBorderColor:
+      - "#ff9e64"
+      - bold
+    optionsTextColor:
+      - "#7dcfff"
+    cherryPickedCommitBgColor:
+      - "#3b4261"
+    cherryPickedCommitFgColor:
+      - "#bb9af7"
+    unstagedChangesColor:
+      - "#f7768e"
+    defaultFgColor:
+      - "#c0caf5"
 
   showFileTree: true # for rendering changes files in a tree format
   showListFooter: true # for seeing the '5 of 20' message in list panels
